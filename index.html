@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New sensi - Xiter | Painel para Free Fire atualizado 2026</title>
+    <meta name="description" content="Aprenda as melhores estratégias e técnicas profissionais de Free Fire. Curso completo com coaching personalizado. +10.000 alunos já dominaram o jogo!">
+ 
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3525977697696631');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=3525977697696631&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel -->
+
+    <!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for( var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script") ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      ttq.load('D879IN3C77U853PK2GHG');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0a0a0a;
+            color: white;
+            overflow-x: hidden;
+        }
+ 
+        /* Canvas 3D background */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+ 
+        /* Garantir que todo conteúdo fique acima do canvas */
+        .banner-verde,
+        .sales-counter,
+        .notifications,
+        .hero,
+        .features,
+        .testimonials,
+        .packages,
+        .guarantee,
+        .faq,
+        footer,
+        .sticky-cta {
+            position: relative;
+            z-index: 1;
+        }
+ 
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 65, 0.5); }
+            50% { box-shadow: 0 0 60px rgba(0, 255, 65, 0.8); }
+        }
+        @keyframes slide-in {
+            from { transform: translateX(-400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes neon-green {
+            0%, 100% { 
+                box-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+                border: 2px solid #00ff41;
+            }
+            50% { 
+                box-shadow: 0 0 20px #00ff41, 0 0 40px #00ff41, 0 0 60px #00ff41;
+                border: 2px solid #00e639;
+            }
+        }
+        @keyframes neon-yellow {
+            0%, 100% { 
+                box-shadow: 0 0 10px #eab308, 0 0 20px #eab308, 0 0 30px #eab308;
+                border: 2px solid #eab308;
+            }
+            50% { 
+                box-shadow: 0 0 20px #f59e0b, 0 0 40px #f59e0b, 0 0 60px #f59e0b;
+                border: 2px solid #fbbf24;
+            }
+        }
+ 
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 20s ease-in-out infinite; }
+        .animate-pulse-scale { animation: pulse-scale 2s ease-in-out infinite; }
+        .animate-bounce-subtle { animation: bounce-subtle 3s infinite; }
+        .animate-glow { animation: glow 2s infinite; }
+        .animate-slide-in { animation: slide-in 0.5s ease forwards; }
+        .animate-neon-green { animation: neon-green 2s ease-in-out infinite; }
+        .animate-neon-yellow { animation: neon-yellow 2s ease-in-out infinite; }
+ 
+        /* Banner */
+        .banner-verde {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(to right, #00ff41, #00e639, #00ff41);
+            color: black;
+            text-align: center;
+            padding: 12px 16px;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+        }
+ 
+        .banner-verde .destaque {
+            color: white;
+            font-weight: 900;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+ 
+        /* Sales Counter */
+        .sales-counter {
+            position: fixed;
+            top: 72px;
+            right: 16px;
+            z-index: 999;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 9999px;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+ 
+        .sales-counter.dragging { cursor: grabbing; }
+        .sales-counter .fire-icon { color: #00ff41; width: 14px; height: 14px; }
+        .sales-counter .count { color: #00ff41; font-variant-numeric: tabular-nums; }
+ 
+        /* Notifications */
+        .notifications {
+            position: fixed;
+            bottom: 16px;
+            left: 16px;
+            z-index: 999;
+            max-width: 320px;
+            pointer-events: none;
+        }
+
+        @keyframes notif-in {
+            from { transform: translateX(-120%); opacity: 0; }
+            to   { transform: translateX(0);     opacity: 1; }
+        }
+        @keyframes notif-out {
+            from { transform: translateX(0);     opacity: 1; max-height: 100px; margin-bottom: 8px; }
+            to   { transform: translateX(-120%); opacity: 0; max-height: 0;     margin-bottom: 0;   }
+        }
+
+        .notification {
+            background: rgba(15,15,15,0.97);
+            border: 1px solid rgba(0,255,65,0.35);
+            border-left: 3px solid #00ff41;
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,255,65,0.08);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            animation: notif-in 0.45s cubic-bezier(0.22,1,0.36,1) forwards;
+            overflow: hidden;
+        }
+
+        .notification.removing {
+            animation: notif-out 0.4s ease forwards;
+        }
+
+        .notif-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 15px;
+            color: #000;
+            flex-shrink: 0;
+            text-transform: uppercase;
+            letter-spacing: 0;
+        }
+
+        .notif-body { flex: 1; min-width: 0; }
+
+        .notif-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            margin-bottom: 2px;
+        }
+
+        .notif-name {
+            font-weight: 700;
+            font-size: 13px;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .notif-time {
+            font-size: 10px;
+            color: #4b5563;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .notif-product {
+            font-size: 12px;
+            color: #d1d5db;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 2px;
+        }
+
+        .notif-footer {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: #6b7280;
+        }
+
+        .notif-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #00ff41;
+            flex-shrink: 0;
+            animation: pulse-scale 1.5s infinite;
+        }
+
+        .notif-badge {
+            display: inline-block;
+            background: rgba(0,255,65,0.15);
+            color: #00ff41;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 9999px;
+            border: 1px solid rgba(0,255,65,0.3);
+        }
+ 
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 96px 16px 64px;
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(0, 255, 65, 0.1), transparent, transparent);
+        }
+ 
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+ 
+        .logo-container { margin-bottom: 32px; }
+ 
+        .logo {
+            width: 192px;
+            max-width: 90%;
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 25px 25px rgba(0,0,0,0.3));
+        }
+ 
+        h1 {
+            font-size: clamp(2.4rem, 10vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 24px;
+            line-height: 1.08;
+            letter-spacing: -0.01em;
+        }
+ 
+        .text-neon {
+            color: #00ff41;
+            filter: drop-shadow(0 0 10px #00ff41) drop-shadow(0 0 20px #00ff41);
+        }
+ 
+        .text-neon-red {
+            color: #ef4444;
+            filter: drop-shadow(0 0 10px #ef4444) drop-shadow(0 0 20px #ef4444);
+        }
+ 
+        .benefits { font-size: 1.125rem; color: #d1d5db; margin-bottom: 32px; }
+        .benefits p { margin-bottom: 8px; }
+ 
+        .user-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 255, 65, 0.1);
+            border: 2px solid #00ff41;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            margin-bottom: 32px;
+        }
+ 
+        .video-placeholder {
+            max-width: 896px;
+            margin: 0 auto 32px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.2);
+            transition: transform 0.5s;
+        }
+ 
+        .video-placeholder:hover { transform: scale(1.05); }
+ 
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, #00ff41, #00e639);
+            color: black;
+            font-size: 1.5rem;
+            font-weight: 900;
+            padding: 20px 48px;
+            border-radius: 16px;
+            text-decoration: none;
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.5);
+            transition: transform 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+ 
+        .cta-button:hover { transform: scale(1.1); }
+ 
+        /* Features Section */
+        .features {
+            padding: 80px 16px;
+            background: linear-gradient(to bottom, transparent, #0f0f0f);
+        }
+ 
+        .features-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            color: white;
+        }
+ 
+        .features-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+ 
+        .feature-card {
+            background: #161616;
+            border: 1px solid #2a2a2a;
+            border-radius: 20px;
+            padding: 40px 28px 36px;
+            transition: all 0.4s;
+            text-align: center;
+        }
+ 
+        .feature-card:hover {
+            border-color: #00ff41;
+            transform: translateY(-8px);
+        }
+ 
+        .feature-card--highlight {
+            border: 2px solid #00ff41;
+            background: #111;
+            box-shadow: 0 0 32px rgba(0,255,65,0.15), inset 0 0 40px rgba(0,255,65,0.04);
+        }
+ 
+        .feature-card--highlight:hover {
+            box-shadow: 0 0 48px rgba(0,255,65,0.3);
+        }
+ 
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 28px;
+            background: #00ff41;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0, 255, 65, 0.35);
+        }
+ 
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+            text-align: center;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: white;
+        }
+ 
+        .feature-card p {
+            color: #9ca3af;
+            text-align: center;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+ 
+        /* ========== TESTIMONIALS - NOVO CARROSSEL ========== */
+        .testimonials { padding: 64px 16px; }
+ 
+        .testimonials h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+ 
+        .testimonials-subtitle {
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 48px;
+            font-size: 1.125rem;
+        }
+ 
+        /* Carrossel wrapper */
+        .carousel-wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+            position: relative;
+        }
+ 
+        .carousel-track-container {
+            overflow: hidden;
+            border-radius: 16px;
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.15);
+            background: #1a1a1a;
+        }
+ 
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+ 
+        .carousel-slide {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+ 
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
+            display: block;
+            background: #1a1a1a;
+        }
+ 
+        /* Botões nav */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #00ff41;
+            color: black;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: none;
+            font-size: 22px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            line-height: 1;
+        }
+ 
+        .carousel-btn:hover {
+            transform: translateY(-50%) scale(1.12);
+            box-shadow: 0 6px 20px rgba(0,255,65,0.4);
+        }
+ 
+        .carousel-btn.prev { left: -22px; }
+        .carousel-btn.next { right: -22px; }
+ 
+        @media (max-width: 540px) {
+            .carousel-btn.prev { left: 4px; }
+            .carousel-btn.next { right: 4px; }
+        }
+ 
+        /* Dots */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 20px;
+        }
+ 
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #4b5563;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 0;
+        }
+ 
+        .carousel-dot.active {
+            background: #00ff41;
+            width: 28px;
+            border-radius: 5px;
+        }
+ 
+        /* Contador de slides */
+        .carousel-counter {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+ 
+        .carousel-counter span { color: #00ff41; font-weight: 700; }
+ 
+        /* Stats card */
+        .stats-card {
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 32px;
+        }
+ 
+        .stats-number { font-size: 3.75rem; font-weight: 900; color: black; margin-bottom: 16px; }
+        .stats-text { font-size: 1.25rem; font-weight: 700; color: black; }
+        .stats-subtext { color: rgba(0,0,0,0.8); font-weight: 600; margin-top: 8px; }
+ 
+        /* Packages */
+        .packages { padding: 80px 16px; }
+ 
+        .packages h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+ 
+        .packages-subtitle {
+            color: #9ca3af;
+            text-align: center;
+            margin-bottom: 48px;
+            font-size: 1.125rem;
+        }
+ 
+        .packages-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+ 
+        .package-card {
+            background: #1a1a1a;
+            border: 2px solid #374151;
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.5s;
+            position: relative;
+        }
+ 
+        .package-card:hover {
+            border-color: #00ff41;
+            transform: translateY(-16px);
+        }
+ 
+        .package-card.vip { border-color: #eab308; }
+        .package-card.vip:hover { border-color: #fbbf24; }
+ 
+        .package-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to right, #eab308, #f59e0b);
+            color: black;
+            padding: 8px 24px;
+            border-radius: 9999px;
+            font-weight: 900;
+            font-size: 14px;
+        }
+ 
+        .package-icon {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 24px;
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #00ff41;
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 65, 0.3);
+        }
+ 
+        .package-card.vip .package-icon {
+            background: linear-gradient(to bottom right, #eab308, #f59e0b);
+            border-color: #eab308;
+            box-shadow: 0 10px 15px -3px rgba(234, 179, 8, 0.3);
+        }
+ 
+        .package-title {
+            font-size: 1.875rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #00ff41;
+        }
+ 
+        .package-card.vip .package-title { color: #eab308; }
+        .package-subtitle { text-align: center; color: #9ca3af; margin-bottom: 24px; }
+ 
+        .package-features { list-style: none; margin-bottom: 32px; }
+ 
+        .package-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+ 
+        .package-features svg { flex-shrink: 0; margin-top: 4px; }
+ 
+        .package-pricing { text-align: center; margin-bottom: 24px; }
+        .package-old-price { color: #ef4444; text-decoration: line-through; font-size: 1.25rem; font-weight: 700; }
+        .package-label { color: #9ca3af; font-size: 14px; }
+        .package-price { font-size: 3rem; font-weight: 900; color: #00ff41; }
+        .package-card.vip .package-price { color: #eab308; }
+ 
+        .package-button {
+            width: 100%;
+            background: linear-gradient(to right, #00ff41, #00e639);
+            color: black;
+            font-weight: 900;
+            padding: 16px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+            font-size: 16px;
+        }
+ 
+        .package-button:hover { transform: scale(1.05); }
+        .package-card.vip .package-button { background: linear-gradient(to right, #eab308, #f59e0b); }
+ 
+        /* Guarantee */
+        .guarantee {
+            padding: 80px 16px;
+            background: linear-gradient(to bottom, transparent, #0f0f0f);
+        }
+ 
+        .guarantee-content { max-width: 896px; margin: 0 auto; text-align: center; }
+ 
+        .guarantee-badge {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 32px;
+            background: linear-gradient(to bottom right, #00ff41, #00e639);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.5);
+        }
+ 
+        .guarantee-badge-number { font-size: 4.5rem; font-weight: 900; color: black; }
+        .guarantee-badge-text { font-size: 14px; font-weight: 700; color: black; }
+ 
+        .guarantee h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 24px; }
+ 
+        .guarantee p {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            margin-bottom: 32px;
+            line-height: 1.625;
+            max-width: 672px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+ 
+        .guarantee-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+ 
+        .guarantee-feature { display: flex; align-items: center; gap: 8px; }
+ 
+        /* FAQ */
+        .faq { padding: 80px 16px; }
+ 
+        .faq h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+ 
+        .faq-container { max-width: 896px; margin: 0 auto; }
+ 
+        .faq-item {
+            background: #1a1a1a;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+ 
+        .faq-item:hover { border-color: #00ff41; }
+ 
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            background: none;
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+ 
+        .faq-question:hover { background: rgba(0, 255, 65, 0.05); }
+        .faq-icon { color: #00ff41; transition: transform 0.3s; }
+        .faq-icon.open { transform: rotate(180deg); }
+ 
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+ 
+        .faq-answer.open {
+            max-height: 500px;
+            padding: 0 24px 20px;
+        }
+ 
+        .faq-answer p { color: #9ca3af; line-height: 1.625; }
+ 
+        /* Footer */
+        footer {
+            padding: 60px 16px 40px;
+            border-top: 1px solid #1e1e1e;
+            background: #000;
+        }
+ 
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            text-align: center;
+        }
+ 
+        .footer-logo-wrap { display: flex; justify-content: center; }
+ 
+        .footer-logo {
+            width: 180px;
+            max-width: 80%;
+            height: auto;
+            filter: drop-shadow(0 0 12px rgba(0,255,65,0.2));
+        }
+ 
+        /* Botão Saiba Mais */
+        .footer-saiba-btn {
+            background: #00ff41;
+            color: black;
+            font-weight: 900;
+            font-size: 15px;
+            padding: 14px 36px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,255,65,0.35);
+        }
+ 
+        .footer-saiba-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 28px rgba(0,255,65,0.5);
+        }
+ 
+        /* Texto expansível */
+        .footer-about {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.4s ease;
+            opacity: 0;
+            max-width: 620px;
+        }
+ 
+        .footer-about.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+ 
+        .footer-about p {
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.75;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+ 
+        .footer-about p:last-child { margin-bottom: 0; }
+ 
+        .footer-copyright {
+            color: #6b7280;
+            font-size: 13px;
+        }
+ 
+        .footer-insta {
+            width: 44px;
+            height: 44px;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+ 
+        .footer-insta:hover {
+            background: #00ff41;
+            border-color: #00ff41;
+            color: black;
+        }
+ 
+        /* Icons SVG */
+        .icon {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+ 
+        /* Media Queries */
+        @media (max-width: 480px) {
+            h1 { font-size: clamp(2rem, 12vw, 2.8rem); letter-spacing: -0.02em; }
+        }
+
+        /* Media Queries */
+        @media (min-width: 768px) {
+            .logo { width: 320px; }
+            .features-title { font-size: 2.5rem; }
+            .features-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+            .packages-grid { grid-template-columns: repeat(3, 1fr); }
+            .testimonials h2 { font-size: 3.75rem; }
+            .packages h2, .faq h2 { font-size: 3.75rem; }
+        }
+ 
+        /* STICKY CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9996;
+            display: none;
+        }
+ 
+        .sticky-cta.show {
+            display: block;
+            animation: sticky-slide-up 0.5s ease-out;
+        }
+ 
+        @keyframes sticky-slide-up {
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+ 
+        .sticky-cta a {
+            display: inline-block;
+            background: linear-gradient(to right, #00ff41, #00e639);
+            color: black;
+            font-weight: 900;
+            padding: 12px 18px;
+            border-radius: 9999px;
+            text-decoration: none;
+            box-shadow: 0 25px 50px -12px rgba(0, 255, 65, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 13px;
+        }
+ 
+        /* Provas sociais */
+        .cta-social-proof {
+            margin-top: 20px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+            font-size: 14px;
+            color: rgba(229, 231, 235, 0.92);
+        }
+ 
+        .cta-social-proof .row { display: flex; align-items: center; gap: 10px; }
+        .cta-social-proof .icon { width: 18px; height: 18px; }
+        .cta-social-proof strong { font-weight: 900; }
+    </style>
+</head>
+<body>
+    <!-- 3D Tech Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+ 
+    <!-- Banner Verde -->
+    <div class="banner-verde">
+        <p>Desconto só <span class="destaque" id="data-atual">HOJE</span> nessa página <span class="destaque" id="data-display"></span></p>
+    </div>
+ 
+    <!-- Sales Counter -->
+    <div class="sales-counter" id="sales-counter">
+        <svg class="fire-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+        </svg>
+        <span><span class="count" id="sales-count">252</span> vendas hoje!</span>
+    </div>
+ 
+    <!-- Notifications -->
+    <div class="notifications" id="notifications"></div>
+ 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg animate-pulse-slow"></div>
+        <div class="hero-content">
+            <div class="logo-container animate-float">
+                <img src="https://static.lumi.new/03/03af9622056718bde17a728ece6c9024.webp" alt="New Xiter Logo" class="logo">
+            </div>
+ 
+            <h1>
+                MELHOR <span class="text-neon">PAINEL XIT</span> PRA DAR<br>
+                <span class="text-neon-red">FULL VERMELHO!</span>
+            </h1>
+ 
+            <div class="benefits">
+                <p>✅ Painel com + <strong style="color: #00ff41;">10 mil  Players</strong> Ativos</p>
+                <p>🎯 Sua mira vai dar só <span style="color: #ef4444; font-weight: 700;">vermelho!</span> Com Painel XIT!</p>
+            </div>
+ 
+            <div class="user-counter animate-pulse-scale">
+                <svg class="icon" style="color: #00ff41;" width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span><strong style="color: #00ff41; font-size: 1.25rem;" id="user-count">998</strong> <span style="color: #d1d5db;">Players online agora!</span></span>
+            </div>
+ 
+            <!-- Wistia Video -->
+            <div class="video-placeholder">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/m8pcxycab8.js" async type="module"></script>
+                <style>
+                    wistia-player[media-id='m8pcxycab8']:not(:defined) { 
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/m8pcxycab8/swatch'); 
+                        display: block; 
+                        filter: blur(5px); 
+                        padding-top:56.25%; 
+                    }
+                </style>
+                <wistia-player media-id="m8pcxycab8" aspect="1.7777777777777777"></wistia-player>
+            </div>
+ 
+            <a href="#pacotes" class="cta-button animate-glow">
+                🎯 QUERO MEU PAINEL AGORA!
+            </a>
+ 
+            <div class="cta-social-proof">
+                <div class="row">
+                    <span>⭐</span>
+                    <span><strong>Avaliação:</strong> 4.9/5 estrelas (baseado em <strong>+5.000 avaliações</strong>)</span>
+                </div>
+                <div class="row">
+                    <span>🏆</span>
+                    <span><strong>Eleito</strong> o melhor painel XIT do Brasil por <strong>3 anos consecutivos</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="features-title">Por que <span class="text-neon">15.000+ players</span> escolheram nosso painel?</h2>
+        <div class="features-grid">
+            <!-- Card 1: Aimbot Legit -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="3"/>
+                        <line x1="12" y1="2" x2="12" y2="5"/>
+                        <line x1="12" y1="19" x2="12" y2="22"/>
+                        <line x1="2" y1="12" x2="5" y2="12"/>
+                        <line x1="19" y1="12" x2="22" y2="12"/>
+                    </svg>
+                </div>
+                <h3>AIMBOT LEGIT</h3>
+                <p>Mira que gruda na cabeça com suavidade natural. Seus amigos vão achar que você apenas treinou muito.</p>
+            </div>
+ 
+            <!-- Card 2: Bypass Anti-Ban (destaque) -->
+            <div class="feature-card feature-card--highlight">
+                <div class="feature-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="black" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2C7.58 2 4 5.58 4 10v10l2.5-2 2.5 2 2.5-2 2.5 2 2.5-2 2.5 2V10c0-4.42-3.58-8-8-8z"/>
+                        <circle cx="9" cy="10" r="1.2" fill="white" stroke="none"/>
+                        <circle cx="15" cy="10" r="1.2" fill="white" stroke="none"/>
+                    </svg>
+                </div>
+                <h3>BYPASS ANTI-BAN</h3>
+                <p>Sistema de segurança de nível militar. Jogue na sua conta principal sem medo de blacklists.</p>
+            </div>
+ 
+            <!-- Card 3: Sistema Stealth -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+                        <line x1="8" y1="7" x2="6" y2="5"/>
+                        <line x1="16" y1="7" x2="18" y2="5"/>
+                        <rect x="5" y="3.5" width="4" height="2.5" rx="1" fill="black" stroke="none"/>
+                        <rect x="15" y="3.5" width="4" height="2.5" rx="1" fill="black" stroke="none"/>
+                    </svg>
+                </div>
+                <h3>SISTEMA STEALTH</h3>
+                <p>Sistema de disfarce indetectável. Jogue com segurança total, sem riscos de banimento ou blacklist, com garantia de proteção.</p>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- ===== TESTIMONIALS - NOVO CARROSSEL COM 11 IMAGENS ===== -->
+    <section class="testimonials">
+        <h2>Veja o que <span class="text-neon">Nossos Alunos</span> Dizem</h2>
+        <p class="testimonials-subtitle">Feedbacks reais de quem já está evoluindo!</p>
+ 
+        <div class="carousel-wrapper">
+            <div class="carousel-track-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (8).jpg" alt="Feedback cliente 1" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (1).PNG" alt="Feedback cliente 2" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (2).jpg" alt="Feedback cliente 3" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (10).jpg" alt="Feedback cliente 4" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (11).jpg" alt="Feedback cliente 5" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (12).jpg" alt="Feedback cliente 6" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (3).jpg" alt="Feedback cliente 7" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (5).jpg" alt="Feedback cliente 8" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (6).jpg" alt="Feedback cliente 9" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (7).jpg" alt="Feedback cliente 10" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img site/pvsocial (9).jpg" alt="Feedback cliente 11" loading="lazy">
+                    </div>
+                </div>
+            </div>
+ 
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Próximo">&#8250;</button>
+ 
+            <div class="carousel-dots" id="carouselDots"></div>
+ 
+            <p class="carousel-counter"><span id="carouselCurrent">1</span> / <span id="carouselTotal">11</span></p>
+        </div>
+ 
+        <div style="max-width:480px; margin: 0 auto;">
+            <div class="stats-card">
+                <p class="stats-number">10.000+</p>
+                <p class="stats-text">Alunos Satisfeitos</p>
+                <p class="stats-subtext">E você será o próximo!</p>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Packages Section -->
+    <section id="pacotes" class="packages">
+        <h2>Escolha Seu <span class="text-neon">Plano</span> Abaixo</h2>
+        <p class="packages-subtitle">Todos os planos incluem suporte e garantia</p>
+ 
+        <div class="packages-grid">
+            <!-- ANDROID -->
+            <div class="package-card">
+                <div class="package-icon" style="background: #111; border: 3px solid #00ff41; box-shadow: 0 0 24px rgba(0,255,65,0.35); overflow:hidden;">
+                    <img src="img site/android.png" alt="Android" style="width:80%; height:80%; object-fit:contain; filter:drop-shadow(0 0 8px #00ff41);">
+                </div>
+                <h3 class="package-title">ANDROID</h3>
+                <p class="package-subtitle">O painel mais vendido para Android!</p>
+                <ul class="package-features">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Painel Mod Menu FFH4X</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Função HS pescoço + Bypass</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Mira automática 100% capa</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>2x Automática</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Rastreamento de cabeça</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP AUTOMÁTICA</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira que gruda</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Disfarce 100% indetectável</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Com disfarce pra não levar Ban!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Instalar sem precisar de PC (opcional)</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Sensi VIP Fullcapa</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Tutorial de Instalação fácil e rápida</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso ao Painel XIT na Hora!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>100% Anti-Ban/Anti-Blacklist!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Nosso ZAP seu Suporte pessoal</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>7 Dias de garantia total</span></li>
+                </ul>
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 147,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price">R$ 29,90</p>
+                </div>
+                <a href="https://ggcheckout.app/checkout/v5/G7giUpjRgJ9dT1v0xEoJ" target="_blank" class="package-button animate-neon-green" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
+            </div>
+ 
+            <!-- IPHONE/IOS -->
+            <div class="package-card">
+                <div class="package-icon" style="background: #111; border: 3px solid #00ff41; box-shadow: 0 0 24px rgba(0,255,65,0.35); overflow:hidden;">
+                    <img src="img site/iphone.png" alt="iPhone/iOS" style="width:80%; height:80%; object-fit:contain; filter:drop-shadow(0 0 8px #00ff41);">
+                </div>
+                <h3 class="package-title">IPHONE/IOS</h3>
+                <p class="package-subtitle">O painel mais vendido para iPhone/iOS!</p>
+                <ul class="package-features">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Painel Mod Menu FFH4X</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Função HS pescoço + Bypass</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Mira automática 100% capa</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>2x Automática</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Rastreamento de cabeça</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP AUTOMÁTICA</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira que gruda</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Disfarce 100% indetectável</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Com disfarce pra não levar Ban!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Instalar sem precisar de PC (opcional)</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Sensi VIP Fullcapa</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Tutorial de Instalação fácil e rápida</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso ao Painel XIT na Hora!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>100% Anti-Ban/Anti-Blacklist!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Nosso ZAP seu Suporte pessoal</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>7 Dias de garantia total</span></li>
+                </ul>
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 197,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price">R$ 29,90</p>
+                </div>
+                <a href="https://ggcheckout.app/checkout/v5/p4f9r2o62EbYgbI7SRz6" target="_blank" class="package-button animate-neon-green" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
+            </div>
+ 
+            <!-- PAINEL CLT PREMIUM (VIP) -->
+            <div class="package-card vip">
+                <div class="package-badge">Mais Popular!</div>
+                <div class="package-icon" style="background: #111; border: 3px solid #eab308; box-shadow: 0 0 24px rgba(234,179,8,0.4); overflow:hidden;">
+                    <img src="img site/CLT.jpg" alt="Painel CLT Premium" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                </div>
+                <h3 class="package-title">PAINEL CLT PREMIUM</h3>
+                <p class="package-subtitle" style="color:#eab308;font-weight:700;">ANDROID/IPHONE + ACESSO VITALÍCIO</p>
+                <ul class="package-features">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>PAINEL CLT Mod Menu FFH4X</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>2x Xitada + 2x Automática</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>No Recoil (não espirra tiros)</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Rastreamento de cabeça avançado</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Função HS pescoço + Bypass</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP automática premium</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira automática Fullcapa</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Disfarce 100% indetectável</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira que gruda!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Com disfarce pra não levar Ban!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Instalar sem precisar de PC (opcional)</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Sensi VIP Fullcapa</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Tutorial de Instalação fácil e rápida</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Suporte VIP Exclusivo 24h/7</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Bônus Atualizações vitalícias</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso antecipado de Atualizações</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#00ff41;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Garantia total de 30 Dias!</span></li>
+                </ul>
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 297,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price" style="color:#eab308;">R$ 19,99</p>
+                </div>
+                <a href="https://ggcheckout.app/checkout/v5/tMcpaEo5DlioibdUy2Tv" target="_blank" class="package-button animate-neon-yellow" style="display:block;text-align:center;text-decoration:none;">👑 QUERO SER VIP!</a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="guarantee-content">
+            <div class="guarantee-badge" style="background:none; box-shadow:none; border:none; width:200px; height:200px;">
+                <img src="img site/garantia.webp" alt="Garantia 7 Dias" style="width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 0 24px rgba(234,179,8,0.5));">
+            </div>
+            <h2>Garantia <span class="text-neon">Total</span> de Satisfação</h2>
+            <p>Experimente o curso por 7 dias completos. Se por qualquer motivo você não ficar 100% satisfeito com os resultados, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia.</p>
+            <div class="guarantee-features">
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Reembolso em até 24h</span>
+                </div>
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Sem perguntas</span>
+                </div>
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke: #00ff41;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Compra 100% segura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <h2>Perguntas <span class="text-neon">Frequentes</span></h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(0)">
+                    <span>PAINEL XIT FUNCIONA PARA INICIANTES ?</span>
+                    <svg class="icon faq-icon" id="faq-icon-0" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-0">
+                    <p>Sim! qualquer pessoa pode instalar em minutos simples é sem complicações no tutorial, fucionar no seu dispositivo (Android ou iPhone/iOS)</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(1)">
+                    <span>COMO RECEBO O PAINEL APÓS A COMPRA ?</span>
+                    <svg class="icon faq-icon" id="faq-icon-1" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-1">
+                    <p>Entrega instantânea! Assim que o pagamento for aprovado, você recebe automaticamente todos os arquivos e instruções no seu email. Pagou, já pode começar a usar o seu XIT!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(2)">
+                    <span>A INSTALAÇÃO É COMPLICADA ?</span>
+                    <svg class="icon faq-icon" id="faq-icon-2" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-2">
+                    <p><strong>Instalação Super simples!</strong> O processo leva menos de 5 minutos. Incluímos tutorial em vídeo passo a passo e nossa equipe de suporte está disponível 24h para ajudar. Se não conseguir, instalamos para você!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(3)">
+                    <span>É REALMENTE 100% ANTI-BAN</span>
+                    <svg class="icon faq-icon" id="faq-icon-3" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-3">
+                    <p><strong>100% Anti-ban garantido!</strong> Nosso sistema é indetectável e já está sendo usado por mais de 10.000 players sem problemas. Caso aconteça algo impossível, reembolsamos tudo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="#pacotes">GARANTIR MINHA VAGA</a>
+    </div>
+ 
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo-wrap">
+                <img src="img site/logo.png" alt="New Xiter Logo" class="footer-logo">
+            </div>
+ 
+            <button class="footer-saiba-btn" id="saibaMaisBtn" onclick="toggleSaibaMais()">
+                Saiba Mais Sobre Nós
+            </button>
+ 
+            <div class="footer-about" id="footerAbout">
+                <p>Sou um criador especializado em hacking e desenvolvimento de aplicativos voltados para jogos. Tenho experiência em criar ferramentas e soluções que otimizam a experiência de jogo, além de desenvolver aplicativos personalizados para melhorar a jogabilidade e a interação dos usuários. Meu foco é inovar e oferecer recursos que atendam às necessidades dos jogadores de Free Fire.</p>
+                <p>Nosso painel é para quem deseja ativar o recurso de xitar 100% full capa no Free Fire em qualquer dispositivo, com 100% de anti-ban e atualizado! Este novo painel utiliza códigos oficiais da Garena Free Fire, vazados dos arquivos da própria Garena. Utilizamos isso para criar um cheat 100% anti-ban e seguro para qualquer dispositivo.</p>
+            </div>
+ 
+            <p class="footer-copyright">© 2026 New sensi - xiter. Todos os direitos reservados.</p>
+ 
+            <a href="https://www.instagram.com/new.xiter.ff/" target="_blank" rel="noopener noreferrer" class="footer-insta" aria-label="Instagram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+ 
+    <script>
+        // Current Date
+        document.getElementById('data-display').textContent = new Date().toLocaleDateString('pt-BR');
+ 
+        // Sales Counter
+        let salesCount = 252;
+        setInterval(() => {
+            salesCount += Math.floor(Math.random() * 3) + 1;
+            document.getElementById('sales-count').textContent = salesCount;
+        }, 15000);
+ 
+        // Draggable Sales Counter
+        const salesCounter = document.getElementById('sales-counter');
+        let isDragging = false, offsetX = 0, offsetY = 0;
+ 
+        salesCounter.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - salesCounter.offsetLeft;
+            offsetY = e.clientY - salesCounter.offsetTop;
+            salesCounter.classList.add('dragging');
+            salesCounter.style.right = 'auto';
+        });
+ 
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                salesCounter.style.left = (e.clientX - offsetX) + 'px';
+                salesCounter.style.top = (e.clientY - offsetY) + 'px';
+            }
+        });
+ 
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            salesCounter.classList.remove('dragging');
+        });
+ 
+        salesCounter.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            const touch = e.touches[0];
+            offsetX = touch.clientX - salesCounter.offsetLeft;
+            offsetY = touch.clientY - salesCounter.offsetTop;
+            salesCounter.classList.add('dragging');
+            salesCounter.style.right = 'auto';
+            e.preventDefault();
+        }, { passive: false });
+ 
+        document.addEventListener('touchmove', (e) => {
+            if (isDragging) {
+                const touch = e.touches[0];
+                salesCounter.style.left = (touch.clientX - offsetX) + 'px';
+                salesCounter.style.top = (touch.clientY - offsetY) + 'px';
+                e.preventDefault();
+            }
+        }, { passive: false });
+ 
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+            salesCounter.classList.remove('dragging');
+        });
+ 
+        // User Counter
+        let userCount = 998;
+        setInterval(() => {
+            userCount += Math.floor(Math.random() * 8) + 3;
+            document.getElementById('user-count').textContent = userCount.toLocaleString('pt-BR');
+        }, 20000);
+ 
+        // ===== SISTEMA DE NOTIFICAÇÕES REALISTA =====
+        const notifData = {
+            firstNames: [
+                "João","Maria","Pedro","Ana","Carlos","Juliana","Rafael","Camila",
+                "Lucas","Fernanda","Matheus","Larissa","Gabriel","Beatriz","Felipe",
+                "Amanda","Bruno","Letícia","Diego","Aline","Thiago","Priscila",
+                "André","Natália","Rodrigo","Carolina","Eduardo","Vanessa","Gustavo",
+                "Bruna","Leonardo","Patrícia","Henrique","Débora","Vinícius","Renata",
+                "Marcelo","Jéssica","Leandro","Sabrina","Alexandre","Mônica","Daniel",
+                "Tâmara","Ricardo","Viviane","Fábio","Tatiane","Otávio","Kelly",
+                "Igor","Elaine","Wesley","Simone","Caio","Nathalia","Murilo","Gisele"
+            ],
+            lastNames: [
+                "Silva","Santos","Oliveira","Souza","Lima","Costa","Pereira","Ferreira",
+                "Rodrigues","Almeida","Nascimento","Gomes","Martins","Araújo","Carvalho",
+                "Melo","Barbosa","Ribeiro","Rocha","Cardoso","Correia","Teixeira","Moura",
+                "Andrade","Cunha","Lopes","Monteiro","Freitas","Mendes","Cavalcante"
+            ],
+            products: [
+                { name: "Painel XIT Android",      emoji: "🎯", badge: "ANDROID",  color: "#00ff41" },
+                { name: "Painel XIT iPhone/iOS",   emoji: "🍎", badge: "iOS",      color: "#00ff41" },
+                { name: "Painel CLT Premium",      emoji: "👑", badge: "VIP",      color: "#eab308" },
+            ],
+            cities: [
+                "São Paulo, SP","Rio de Janeiro, RJ","Belo Horizonte, MG","Salvador, BA",
+                "Porto Alegre, RS","Curitiba, PR","Recife, PE","Fortaleza, CE",
+                "Manaus, AM","Belém, PA","Goiânia, GO","Florianópolis, SC",
+                "Campinas, SP","São Luís, MA","Maceió, AL","Natal, RN",
+                "Teresina, PI","Campo Grande, MS","João Pessoa, PB","Aracaju, SE",
+                "Macapá, AP","Porto Velho, RO","Palmas, TO","Vitória, ES",
+                "Ribeirão Preto, SP","Uberlândia, MG","Sorocaba, SP","Feira de Santana, BA",
+                "Joinville, SC","Londrina, PR","Niterói, RJ","Juiz de Fora, MG",
+                "Ananindeua, PA","Duque de Caxias, RJ","Contagem, MG","Santo André, SP"
+            ],
+            avatarColors: [
+                ["#00ff41","#00c832"],["#eab308","#ca8a04"],["#3b82f6","#1d4ed8"],
+                ["#f97316","#c2410c"],["#a855f7","#7e22ce"],["#ec4899","#be185d"],
+                ["#06b6d4","#0e7490"],["#10b981","#047857"]
+            ],
+            timeAgo: ["agora mesmo","há 1 min","há 2 min","há 3 min","há 4 min","há 5 min"]
+        };
+
+        function getRand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+        function getInitials(first, last) {
+            return (first[0] + last[0]).toUpperCase();
+        }
+
+        // Ocultar nome parcialmente para privacidade (realismo)
+        function maskName(first, last) {
+            const maskedLast = last[0] + last.slice(1).replace(/[a-zA-ZÀ-ú]/g, '*');
+            return first + ' ' + maskedLast;
+        }
+
+        function showNotification() {
+            const firstName  = getRand(notifData.firstNames);
+            const lastName   = getRand(notifData.lastNames);
+            const product    = getRand(notifData.products);
+            const city       = getRand(notifData.cities);
+            const timeAgo    = getRand(notifData.timeAgo);
+            const avatarPair = getRand(notifData.avatarColors);
+            const initials   = getInitials(firstName, lastName);
+            const displayName = maskName(firstName, lastName);
+
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.innerHTML = `
+                <div class="notif-avatar" style="background: linear-gradient(135deg, ${avatarPair[0]}, ${avatarPair[1]});">
+                    ${initials}
+                </div>
+                <div class="notif-body">
+                    <div class="notif-header">
+                        <span class="notif-name">${displayName}</span>
+                        <span class="notif-time">${timeAgo}</span>
+                    </div>
+                    <div class="notif-product">${product.emoji} ${product.name}</div>
+                    <div class="notif-footer">
+                        <span class="notif-dot"></span>
+                        <span>${city}</span>
+                        <span class="notif-badge" style="color:${product.color};border-color:${product.color}40;background:${product.color}18;">${product.badge}</span>
+                    </div>
+                </div>
+            `;
+
+            const container = document.getElementById('notifications');
+            container.appendChild(notif);
+
+            // Remove com animação suave
+            setTimeout(() => {
+                notif.classList.add('removing');
+                setTimeout(() => notif.remove(), 400);
+            }, 5500);
+        }
+
+        // Primeira notificação logo no início
+        setTimeout(() => showNotification(), 2000);
+
+        // Disparo com intervalo variável (mais realista)
+        function scheduleNext() {
+            const delay = Math.floor(Math.random() * 6000) + 5000; // 5s a 11s
+            setTimeout(() => {
+                showNotification();
+                scheduleNext();
+            }, delay);
+        }
+        scheduleNext();
+ 
+        // ===== NOVO CARROSSEL =====
+        const TOTAL_SLIDES = 11;
+        let currentSlide = 0;
+        let autoplayTimer = null;
+ 
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        const currentEl = document.getElementById('carouselCurrent');
+ 
+        for (let i = 0; i < TOTAL_SLIDES; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Feedback ${i + 1}`);
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+ 
+        function goToSlide(index) {
+            currentSlide = (index + TOTAL_SLIDES) % TOTAL_SLIDES;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            currentEl.textContent = currentSlide + 1;
+            document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+                d.classList.toggle('active', i === currentSlide);
+            });
+            resetAutoplay();
+        }
+ 
+        function moveCarousel(dir) {
+            goToSlide(currentSlide + dir);
+        }
+ 
+        function startAutoplay() {
+            autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 4000);
+        }
+ 
+        function resetAutoplay() {
+            clearInterval(autoplayTimer);
+            startAutoplay();
+        }
+ 
+        startAutoplay();
+ 
+        let touchStartX = 0;
+        const trackContainer = document.querySelector('.carousel-track-container');
+ 
+        trackContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+ 
+        trackContainer.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) moveCarousel(diff > 0 ? 1 : -1);
+        }, { passive: true });
+ 
+        // Saiba Mais toggle
+        function toggleSaibaMais() {
+            const about = document.getElementById('footerAbout');
+            const btn = document.getElementById('saibaMaisBtn');
+            const isOpen = about.classList.toggle('open');
+            btn.textContent = isOpen ? 'Fechar ▲' : 'Saiba Mais Sobre Nós';
+        }
+ 
+        // FAQ Toggle
+        function toggleFaq(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            answer.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+ 
+        // Sticky CTA — some no FAQ E no footer
+        const stickyCta = document.getElementById('sticky-cta');
+        const faqEl = document.getElementById('faq');
+        const footerEl = document.getElementById('footer');
+
+        if (stickyCta && 'IntersectionObserver' in window) {
+            let faqVisible = false;
+            let footerVisible = false;
+
+            function updateStickyCta() {
+                if (faqVisible && !footerVisible) {
+                    stickyCta.classList.add('show');
+                } else {
+                    stickyCta.classList.remove('show');
+                }
+            }
+
+            if (faqEl) {
+                const faqObs = new IntersectionObserver(
+                    (entries) => {
+                        faqVisible = entries[0].isIntersecting;
+                        updateStickyCta();
+                    },
+                    { threshold: 0.35 }
+                );
+                faqObs.observe(faqEl);
+            }
+
+            if (footerEl) {
+                const footerObs = new IntersectionObserver(
+                    (entries) => {
+                        footerVisible = entries[0].isIntersecting;
+                        updateStickyCta();
+                    },
+                    { threshold: 0.01 }
+                );
+                footerObs.observe(footerEl);
+            }
+        }
+    </script>
+ 
+    <script>
+    // ===== 3D TECH BACKGROUND - ENHANCED =====
+    (function() {
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+ 
+        let W, H;
+        let t = 0;
+        let mouse = { x: -9999, y: -9999 };
+ 
+        const NODE_COUNT = 70;
+        let nodes = [];
+ 
+        function randRange(a, b) { return a + Math.random() * (b - a); }
+ 
+        function resize() {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+ 
+        function createNodes() {
+            nodes = Array.from({ length: NODE_COUNT }, () => ({
+                x: randRange(0, W),
+                y: randRange(0, H),
+                z: randRange(60, 500),
+                vx: randRange(-0.2, 0.2),
+                vy: randRange(-0.12, 0.12),
+                vz: randRange(-0.4, 0.4),
+                r: randRange(1, 2.5)
+            }));
+        }
+ 
+        function project(node) {
+            const fov = 320;
+            const scale = fov / (fov + node.z);
+            return {
+                sx: node.x * scale + W * (1 - scale) / 2,
+                sy: node.y * scale + H * (1 - scale) / 2,
+                scale
+            };
+        }
+ 
+        function drawGrid() {
+            const horizon = H * 0.42;
+            const vp = { x: W / 2, y: horizon };
+            const COLS = 20;
+            const ROWS = 18;
+            const speed = (t * 0.4) % (H / ROWS);
+ 
+            ctx.save();
+ 
+            for (let i = 0; i <= COLS; i++) {
+                const xFrac = i / COLS;
+                const xBottom = W * xFrac;
+                const alpha = 0.03 + 0.04 * Math.sin(xFrac * Math.PI);
+                ctx.beginPath();
+                ctx.moveTo(vp.x, vp.y);
+                ctx.lineTo(xBottom, H);
+                ctx.strokeStyle = `rgba(0,255,65,${alpha})`;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+            }
+ 
+            for (let j = 0; j <= ROWS; j++) {
+                const yFrac = j / ROWS;
+                const perspective = Math.pow(yFrac, 2.2);
+                const y = horizon + (H - horizon) * perspective + speed;
+                if (y > H) continue;
+                if (y < horizon) continue;
+ 
+                const alpha = 0.02 + 0.055 * perspective;
+                const xLeft  = vp.x - (vp.x) * perspective;
+                const xRight = vp.x + (W - vp.x) * perspective;
+ 
+                ctx.beginPath();
+                ctx.moveTo(xLeft, y);
+                ctx.lineTo(xRight, y);
+                ctx.strokeStyle = `rgba(0,255,65,${alpha})`;
+                ctx.lineWidth = 0.7 + perspective * 1.2;
+                ctx.stroke();
+            }
+ 
+            const horizGrad = ctx.createLinearGradient(0, horizon - 40, 0, horizon + 30);
+            horizGrad.addColorStop(0, 'rgba(0,255,65,0)');
+            horizGrad.addColorStop(0.5, 'rgba(0,255,65,0.06)');
+            horizGrad.addColorStop(1, 'rgba(0,255,65,0)');
+            ctx.fillStyle = horizGrad;
+            ctx.fillRect(0, horizon - 40, W, 70);
+ 
+            ctx.restore();
+        }
+ 
+        const HEX_COUNT = 14;
+        const hexes = Array.from({ length: HEX_COUNT }, () => ({
+            x: randRange(0, 1),
+            y: randRange(0, 1),
+            size: randRange(28, 80),
+            speed: randRange(0.00008, 0.00025),
+            phase: randRange(0, Math.PI * 2),
+            alpha: randRange(0.03, 0.12)
+        }));
+ 
+        function drawHex(cx, cy, r, alpha) {
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                const angle = (Math.PI / 3) * i - Math.PI / 6;
+                const px = cx + r * Math.cos(angle);
+                const py = cy + r * Math.sin(angle);
+                i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.strokeStyle = `rgba(0,255,65,${alpha})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+        }
+ 
+        function drawHexes() {
+            hexes.forEach(h => {
+                h.y -= h.speed;
+                if (h.y < -0.15) { h.y = 1.1; h.x = randRange(0, 1); }
+                const pulse = 0.5 + 0.5 * Math.sin(t * 0.02 + h.phase);
+                drawHex(h.x * W, h.y * H, h.size * (0.9 + pulse * 0.2), h.alpha * (0.6 + pulse * 0.4));
+                drawHex(h.x * W, h.y * H, h.size * 0.5 * (0.9 + pulse * 0.2), h.alpha * 0.5 * (0.6 + pulse * 0.4));
+            });
+        }
+ 
+        const MAX_DIST = 150;
+ 
+        function drawNodes() {
+            nodes.forEach(n => {
+                n.x += n.vx; n.y += n.vy; n.z += n.vz;
+                if (n.x < 0 || n.x > W) n.vx *= -1;
+                if (n.y < 0 || n.y > H) n.vy *= -1;
+                if (n.z < 60 || n.z > 500) n.vz *= -1;
+            });
+ 
+            const projected = nodes.map(n => ({ ...project(n), node: n }));
+            const sorted = [...projected].sort((a, b) => b.node.z - a.node.z);
+ 
+            for (let i = 0; i < sorted.length; i++) {
+                for (let j = i + 1; j < sorted.length; j++) {
+                    const a = sorted[i], b = sorted[j];
+                    const dx = a.sx - b.sx, dy = a.sy - b.sy;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < MAX_DIST) {
+                        const alpha = (1 - dist / MAX_DIST) * 0.12 * a.scale * b.scale * 3;
+                        ctx.beginPath();
+                        ctx.moveTo(a.sx, a.sy);
+                        ctx.lineTo(b.sx, b.sy);
+                        ctx.strokeStyle = `rgba(0,255,65,${alpha})`;
+                        ctx.lineWidth = 0.6;
+                        ctx.stroke();
+                    }
+                }
+            }
+ 
+            sorted.forEach(({ sx, sy, scale, node }) => {
+                const r = node.r * scale * 2.5;
+                const alpha = 0.3 + scale * 0.7;
+ 
+                const grd = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 5);
+                grd.addColorStop(0, `rgba(0,255,65,${alpha * 0.45})`);
+                grd.addColorStop(1, 'rgba(0,255,65,0)');
+                ctx.beginPath();
+                ctx.arc(sx, sy, r * 5, 0, Math.PI * 2);
+                ctx.fillStyle = grd;
+                ctx.fill();
+ 
+                ctx.beginPath();
+                ctx.arc(sx, sy, r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0,255,65,${alpha})`;
+                ctx.fill();
+            });
+ 
+            nodes.forEach(n => {
+                const { sx, sy } = project(n);
+                const dx = sx - mouse.x, dy = sy - mouse.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < 200) {
+                    const alpha = (1 - dist / 200) * 0.45;
+                    ctx.beginPath();
+                    ctx.moveTo(mouse.x, mouse.y);
+                    ctx.lineTo(sx, sy);
+                    ctx.strokeStyle = `rgba(0,255,65,${alpha})`;
+                    ctx.lineWidth = 1.2;
+                    ctx.stroke();
+                }
+            });
+        }
+ 
+        function drawScanlines() {
+            ctx.save();
+            for (let y = 0; y < H; y += 4) {
+                ctx.fillStyle = 'rgba(0,0,0,0.03)';
+                ctx.fillRect(0, y, W, 1);
+            }
+            ctx.restore();
+        }
+ 
+        function drawVignette() {
+            const vgrd = ctx.createRadialGradient(W/2, H/2, H*0.3, W/2, H/2, H*0.85);
+            vgrd.addColorStop(0, 'rgba(0,0,0,0)');
+            vgrd.addColorStop(1, 'rgba(0,0,0,0.55)');
+            ctx.fillStyle = vgrd;
+            ctx.fillRect(0, 0, W, H);
+        }
+ 
+        function draw() {
+            t++;
+
+            // ALTERADO: fundo mais escuro (era 0.18, agora 0.55)
+            ctx.fillStyle = 'rgba(10,10,10,0.55)';
+            ctx.fillRect(0, 0, W, H);
+ 
+            drawGrid();
+            drawHexes();
+            drawNodes();
+            drawScanlines();
+            drawVignette();
+ 
+            requestAnimationFrame(draw);
+        }
+ 
+        window.addEventListener('resize', () => { resize(); createNodes(); });
+        window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+ 
+        resize();
+        createNodes();
+        draw();
+    })();
+    </script>
+</body>
+</html>
