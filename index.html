@@ -440,23 +440,21 @@
             border: 2px solid rgba(139,92,246,0.35);
             box-shadow: 0 25px 50px -12px rgba(139,92,246,0.2);
             background: var(--surface);
-            clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-            aspect-ratio: 9 / 14;
-            height: auto;
+            position: relative;
+            /* Altura fixa: todos os slides ficam no mesmo box no mobile */
+            height: min(78vw, 500px);
         }
         .carousel-track {
             display: flex;
+            width: 100%;
             height: 100%;
+            will-change: transform;
             transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
         }
         .carousel-slide {
-            min-width: 100%;
             flex-shrink: 0;
+            width: 100%;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
         }
         .carousel-slide img {
             width: 100%;
@@ -795,7 +793,7 @@
                     ou ajuste o caminho abaixo conforme necessário.
                 -->
                 <span class="logo-kanji logo-kanji-left">殺</span>
-                <img src="img site/unnamed (1)-Photoroom.png" alt="Toji Panel XIT Logo" class="logo">
+                <img src="Jujutsu_kaisen_Toji.jfif" alt="Toji Panel XIT Logo" class="logo">
                 <span class="logo-kanji">呪</span>
             </div>
 
@@ -1128,7 +1126,7 @@
                 <!--
                     IMAGEM: coloque "toji_pfp.jfif" na mesma pasta do HTML
                 -->
-                <img src="img site/unnamed-removebg-preview.png" alt="Toji Panel XIT" class="footer-logo">
+                <img src="toji_pfp.jfif" alt="Toji Panel XIT" class="footer-logo">
             </div>
             <p class="footer-brand">TOJI PANEL - XIT</p>
 
@@ -1243,6 +1241,9 @@
         const track = document.getElementById('carouselTrack');
         const dotsContainer = document.getElementById('carouselDots');
         const currentEl = document.getElementById('carouselCurrent');
+        const trackContainer = document.querySelector('.carousel-track-container');
+
+        // Gera os dots
         for (let i = 0; i < TOTAL_SLIDES; i++) {
             const dot = document.createElement('button');
             dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -1250,21 +1251,52 @@
             dot.addEventListener('click', () => goToSlide(i));
             dotsContainer.appendChild(dot);
         }
+
+        // Usa pixels em vez de % para evitar bug no mobile
+        // (% no translateX é relativo ao próprio elemento, não ao container)
+        function getSlideWidth() {
+            return trackContainer.offsetWidth;
+        }
+
         function goToSlide(index) {
             currentSlide = (index + TOTAL_SLIDES) % TOTAL_SLIDES;
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            const px = currentSlide * getSlideWidth();
+            track.style.transform = `translateX(-${px}px)`;
             currentEl.textContent = currentSlide + 1;
             document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
             resetAutoplay();
         }
+
+        // Recalcula posição ao redimensionar (rotação de tela no mobile)
+        window.addEventListener('resize', () => {
+            track.style.transition = 'none';
+            const px = currentSlide * getSlideWidth();
+            track.style.transform = `translateX(-${px}px)`;
+            requestAnimationFrame(() => { track.style.transition = ''; });
+        });
+
         function moveCarousel(dir) { goToSlide(currentSlide + dir); }
         function startAutoplay() { autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 4000); }
         function resetAutoplay() { clearInterval(autoplayTimer); startAutoplay(); }
         startAutoplay();
-        let touchStartX = 0;
-        const trackContainer = document.querySelector('.carousel-track-container');
-        trackContainer.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
-        trackContainer.addEventListener('touchend', (e) => { const diff = touchStartX - e.changedTouches[0].clientX; if (Math.abs(diff) > 40) moveCarousel(diff > 0 ? 1 : -1); }, { passive: true });
+
+        // Touch swipe
+        let touchStartX = 0, touchStartY = 0, isSwiping = false;
+        trackContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isSwiping = false;
+        }, { passive: true });
+        trackContainer.addEventListener('touchmove', (e) => {
+            const dx = Math.abs(e.touches[0].clientX - touchStartX);
+            const dy = Math.abs(e.touches[0].clientY - touchStartY);
+            if (dx > dy) isSwiping = true; // swipe horizontal detectado
+        }, { passive: true });
+        trackContainer.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) moveCarousel(diff > 0 ? 1 : -1);
+        }, { passive: true });
 
         // Saiba Mais
         function toggleSaibaMais() {
