@@ -317,8 +317,8 @@
             margin: 0 auto 32px;
             border-radius: 16px;
             overflow: hidden;
-            border: 2px solid rgba(139,92,246,0.35);
-            box-shadow: 0 25px 50px -12px rgba(139,92,246,0.25), 0 0 60px rgba(139,92,246,0.1);
+            border: none;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
             transition: transform 0.5s;
         }
         .video-placeholder:hover { transform: scale(1.02); }
@@ -793,7 +793,7 @@
                     ou ajuste o caminho abaixo conforme necessário.
                 -->
                 <span class="logo-kanji logo-kanji-left">殺</span>
-                <img src="img site/logo toji.png" alt="Toji Panel XIT Logo" class="logo">
+                <img src="Jujutsu_kaisen_Toji.jfif" alt="Toji Panel XIT Logo" class="logo">
                 <span class="logo-kanji">呪</span>
             </div>
 
@@ -819,14 +819,14 @@
             <!-- Video -->
             <div class="video-placeholder">
                 <script src="https://fast.wistia.com/player.js" async></script>
-                <script src="https://fast.wistia.com/embed/m8pcxycab8.js" async type="module"></script>
+                <script src="https://fast.wistia.com/embed/ogux2f6klj.js" async type="module"></script>
                 <style>
-                    wistia-player[media-id='m8pcxycab8']:not(:defined) {
-                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/m8pcxycab8/swatch');
+                    wistia-player[media-id='ogux2f6klj']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ogux2f6klj/swatch');
                         display: block; filter: blur(5px); padding-top: 56.25%;
                     }
                 </style>
-                <wistia-player media-id="m8pcxycab8" aspect="1.7777777777777777"></wistia-player>
+                <wistia-player media-id="ogux2f6klj" aspect="1.7777777777777777"></wistia-player>
             </div>
 
             <a href="#pacotes" class="cta-button animate-glow">
@@ -1126,7 +1126,1537 @@
                 <!--
                     IMAGEM: coloque "toji_pfp.jfif" na mesma pasta do HTML
                 -->
-                <img src="img site/logo toji.png" alt="Toji Panel XIT" class="footer-logo">
+                <img src="toji_pfp.jfif" alt="Toji Panel XIT" class="footer-logo">
+            </div>
+            <p class="footer-brand">TOJI PANEL - XIT</p>
+
+            <button class="footer-saiba-btn" id="saibaMaisBtn" onclick="toggleSaibaMais()">
+                SAIBA MAIS SOBRE NÓS
+            </button>
+
+            <div class="footer-about" id="footerAbout">
+                <p>Sou um criador especializado em hacking e desenvolvimento de aplicativos voltados para jogos. Tenho experiência em criar ferramentas e soluções que otimizam a experiência de jogo, além de desenvolver aplicativos personalizados para melhorar a jogabilidade e a interação dos usuários. Meu foco é inovar e oferecer recursos que atendam às necessidades dos jogadores de Free Fire.</p>
+                <p>Nosso painel é para quem deseja ativar o recurso de xitar 100% full capa no Free Fire em qualquer dispositivo, com 100% de anti-ban e atualizado! Este novo painel utiliza códigos oficiais da Garena Free Fire, vazados dos arquivos da própria Garena. Utilizamos isso para criar um cheat 100% anti-ban e seguro para qualquer dispositivo.</p>
+            </div>
+
+            <p class="footer-copyright">© 2026 Toji Panel - XIT. Todos os direitos reservados.</p>
+
+            <a href="https://www.instagram.com/new.xiter.ff/" target="_blank" rel="noopener noreferrer" class="footer-insta" aria-label="Instagram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+        // Date
+        document.getElementById('data-display').textContent = new Date().toLocaleDateString('pt-BR');
+
+        // Sales counter
+        let salesCount = 252;
+        setInterval(() => {
+            salesCount += Math.floor(Math.random() * 3) + 1;
+            document.getElementById('sales-count').textContent = salesCount;
+        }, 15000);
+
+        // Draggable sales counter
+        const salesCounter = document.getElementById('sales-counter');
+        let isDragging = false, offsetX = 0, offsetY = 0;
+        salesCounter.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - salesCounter.offsetLeft;
+            offsetY = e.clientY - salesCounter.offsetTop;
+            salesCounter.classList.add('dragging');
+            salesCounter.style.right = 'auto';
+        });
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) { salesCounter.style.left = (e.clientX - offsetX) + 'px'; salesCounter.style.top = (e.clientY - offsetY) + 'px'; }
+        });
+        document.addEventListener('mouseup', () => { isDragging = false; salesCounter.classList.remove('dragging'); });
+        salesCounter.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            const t = e.touches[0];
+            offsetX = t.clientX - salesCounter.offsetLeft;
+            offsetY = t.clientY - salesCounter.offsetTop;
+            salesCounter.style.right = 'auto';
+            e.preventDefault();
+        }, { passive: false });
+        document.addEventListener('touchmove', (e) => {
+            if (isDragging) { const t = e.touches[0]; salesCounter.style.left = (t.clientX - offsetX) + 'px'; salesCounter.style.top = (t.clientY - offsetY) + 'px'; e.preventDefault(); }
+        }, { passive: false });
+        document.addEventListener('touchend', () => { isDragging = false; salesCounter.classList.remove('dragging'); });
+
+        // User counter
+        let userCount = 998;
+        setInterval(() => {
+            userCount += Math.floor(Math.random() * 8) + 3;
+            document.getElementById('user-count').textContent = userCount.toLocaleString('pt-BR');
+        }, 20000);
+
+        // ====== NOTIFICATIONS ======
+        const notifData = {
+            firstNames: ["João","Maria","Pedro","Ana","Carlos","Juliana","Rafael","Camila","Lucas","Fernanda","Matheus","Larissa","Gabriel","Beatriz","Felipe","Amanda","Bruno","Letícia","Diego","Aline","Thiago","Priscila","André","Natália","Rodrigo","Carolina","Eduardo","Vanessa","Gustavo","Bruna","Leonardo","Patrícia","Henrique","Débora","Vinícius","Renata","Marcelo","Jéssica","Leandro","Sabrina","Alexandre","Mônica","Daniel","Tâmara","Ricardo","Viviane","Fábio","Tatiane","Otávio","Kelly","Igor","Elaine","Wesley","Simone","Caio","Nathalia","Murilo","Gisele"],
+            lastNames: ["Silva","Santos","Oliveira","Souza","Lima","Costa","Pereira","Ferreira","Rodrigues","Almeida","Nascimento","Gomes","Martins","Araújo","Carvalho","Melo","Barbosa","Ribeiro","Rocha","Cardoso","Correia","Teixeira","Moura","Andrade","Cunha","Lopes","Monteiro","Freitas","Mendes","Cavalcante"],
+            products: [
+                { name: "Painel Toji Android", emoji: "⚔️", badge: "ANDROID", color: "#8b5cf6" },
+                { name: "Painel Toji iPhone/iOS", emoji: "🍎", badge: "iOS", color: "#8b5cf6" },
+                { name: "Painel CLT Premium", emoji: "👑", badge: "VIP", color: "#eab308" },
+            ],
+            cities: ["São Paulo, SP","Rio de Janeiro, RJ","Belo Horizonte, MG","Salvador, BA","Porto Alegre, RS","Curitiba, PR","Recife, PE","Fortaleza, CE","Manaus, AM","Belém, PA","Goiânia, GO","Florianópolis, SC","Campinas, SP","São Luís, MA","Maceió, AL","Natal, RN","Teresina, PI","Campo Grande, MS","João Pessoa, PB","Aracaju, SE","Macapá, AP","Porto Velho, RO","Palmas, TO","Vitória, ES","Ribeirão Preto, SP","Uberlândia, MG","Sorocaba, SP","Feira de Santana, BA","Joinville, SC","Londrina, PR","Niterói, RJ","Juiz de Fora, MG","Ananindeua, PA","Duque de Caxias, RJ","Contagem, MG","Santo André, SP"],
+            avatarColors: [["#7c3aed","#5b21b6"],["#eab308","#ca8a04"],["#3b82f6","#1d4ed8"],["#f97316","#c2410c"],["#a855f7","#7e22ce"],["#ec4899","#be185d"],["#06b6d4","#0e7490"],["#8b5cf6","#6d28d9"]],
+            timeAgo: ["agora mesmo","há 1 min","há 2 min","há 3 min","há 4 min","há 5 min"]
+        };
+        function getRand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+        function getInitials(f, l) { return (f[0] + l[0]).toUpperCase(); }
+        function maskName(f, l) { return f + ' ' + l[0] + l.slice(1).replace(/[a-zA-ZÀ-ú]/g, '*'); }
+        function showNotification() {
+            const fn = getRand(notifData.firstNames), ln = getRand(notifData.lastNames);
+            const product = getRand(notifData.products), city = getRand(notifData.cities);
+            const timeAgo = getRand(notifData.timeAgo), ap = getRand(notifData.avatarColors);
+            const n = document.createElement('div');
+            n.className = 'notification';
+            n.innerHTML = `
+                <div class="notif-avatar" style="background:linear-gradient(135deg,${ap[0]},${ap[1]});">${getInitials(fn,ln)}</div>
+                <div class="notif-body">
+                    <div class="notif-header"><span class="notif-name">${maskName(fn,ln)}</span><span class="notif-time">${timeAgo}</span></div>
+                    <div class="notif-product">${product.emoji} ${product.name}</div>
+                    <div class="notif-footer"><span class="notif-dot"></span><span>${city}</span><span class="notif-badge" style="color:${product.color};border-color:${product.color}40;background:${product.color}18;">${product.badge}</span></div>
+                </div>`;
+            document.getElementById('notifications').appendChild(n);
+            setTimeout(() => { n.classList.add('removing'); setTimeout(() => n.remove(), 400); }, 5500);
+        }
+        setTimeout(() => showNotification(), 2000);
+        function scheduleNext() {
+            setTimeout(() => { showNotification(); scheduleNext(); }, Math.floor(Math.random() * 6000) + 5000);
+        }
+        scheduleNext();
+
+        // ====== CAROUSEL ======
+        const TOTAL_SLIDES = 11;
+        let currentSlide = 0, autoplayTimer = null;
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        const currentEl = document.getElementById('carouselCurrent');
+        const trackContainer = document.querySelector('.carousel-track-container');
+
+        // Gera os dots
+        for (let i = 0; i < TOTAL_SLIDES; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Feedback ${i + 1}`);
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        // Usa pixels em vez de % para evitar bug no mobile
+        // (% no translateX é relativo ao próprio elemento, não ao container)
+        function getSlideWidth() {
+            return trackContainer.offsetWidth;
+        }
+
+        function goToSlide(index) {
+            currentSlide = (index + TOTAL_SLIDES) % TOTAL_SLIDES;
+            const px = currentSlide * getSlideWidth();
+            track.style.transform = `translateX(-${px}px)`;
+            currentEl.textContent = currentSlide + 1;
+            document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+            resetAutoplay();
+        }
+
+        // Recalcula posição ao redimensionar (rotação de tela no mobile)
+        window.addEventListener('resize', () => {
+            track.style.transition = 'none';
+            const px = currentSlide * getSlideWidth();
+            track.style.transform = `translateX(-${px}px)`;
+            requestAnimationFrame(() => { track.style.transition = ''; });
+        });
+
+        function moveCarousel(dir) { goToSlide(currentSlide + dir); }
+        function startAutoplay() { autoplayTimer = setInterval(() => goToSlide(currentSlide + 1), 4000); }
+        function resetAutoplay() { clearInterval(autoplayTimer); startAutoplay(); }
+        startAutoplay();
+
+        // Touch swipe
+        let touchStartX = 0, touchStartY = 0, isSwiping = false;
+        trackContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isSwiping = false;
+        }, { passive: true });
+        trackContainer.addEventListener('touchmove', (e) => {
+            const dx = Math.abs(e.touches[0].clientX - touchStartX);
+            const dy = Math.abs(e.touches[0].clientY - touchStartY);
+            if (dx > dy) isSwiping = true; // swipe horizontal detectado
+        }, { passive: true });
+        trackContainer.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) moveCarousel(diff > 0 ? 1 : -1);
+        }, { passive: true });
+
+        // Saiba Mais
+        function toggleSaibaMais() {
+            const about = document.getElementById('footerAbout');
+            const btn = document.getElementById('saibaMaisBtn');
+            const isOpen = about.classList.toggle('open');
+            btn.textContent = isOpen ? 'FECHAR ▲' : 'SAIBA MAIS SOBRE NÓS';
+        }
+
+        // FAQ
+        function toggleFaq(index) {
+            document.getElementById(`faq-answer-${index}`).classList.toggle('open');
+            document.getElementById(`faq-icon-${index}`).classList.toggle('open');
+        }
+
+        // Sticky CTA
+        const stickyCta = document.getElementById('sticky-cta');
+        const faqEl = document.getElementById('faq');
+        const footerEl = document.getElementById('footer');
+        if (stickyCta && 'IntersectionObserver' in window) {
+            let faqVisible = false, footerVisible = false;
+            function updateStickyCta() { stickyCta.classList.toggle('show', faqVisible && !footerVisible); }
+            if (faqEl) { new IntersectionObserver(e => { faqVisible = e[0].isIntersecting; updateStickyCta(); }, { threshold: 0.35 }).observe(faqEl); }
+            if (footerEl) { new IntersectionObserver(e => { footerVisible = e[0].isIntersecting; updateStickyCta(); }, { threshold: 0.01 }).observe(footerEl); }
+        }
+    </script>
+
+    <!-- ====== CURSED ENERGY CANVAS ====== -->
+    <script>
+    (function() {
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let W, H, t = 0;
+        let mouse = { x: -9999, y: -9999 };
+        const NODE_COUNT = 65;
+        let nodes = [];
+
+        // Japanese kanji for Toji theme
+        const KANJI = ['殺','呪','術','最','強','気','無','影','刃','霊','式','神'];
+        let kanji = [];
+
+        function randRange(a, b) { return a + Math.random() * (b - a); }
+
+        function resize() {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+
+        function createNodes() {
+            nodes = Array.from({ length: NODE_COUNT }, () => ({
+                x: randRange(0, W), y: randRange(0, H), z: randRange(60, 500),
+                vx: randRange(-0.18, 0.18), vy: randRange(-0.1, 0.1), vz: randRange(-0.35, 0.35),
+                r: randRange(1, 2.2)
+            }));
+            kanji = Array.from({ length: 18 }, () => ({
+                x: randRange(0, 1), y: randRange(0, 1.2),
+                char: KANJI[Math.floor(Math.random() * KANJI.length)],
+                size: randRange(16, 52),
+                speed: randRange(0.00006, 0.0002),
+                alpha: randRange(0.04, 0.14),
+                phase: randRange(0, Math.PI * 2)
+            }));
+        }
+
+        function project(n) {
+            const fov = 320, scale = fov / (fov + n.z);
+            return { sx: n.x * scale + W * (1 - scale) / 2, sy: n.y * scale + H * (1 - scale) / 2, scale };
+        }
+
+        function drawGrid() {
+            const horizon = H * 0.42, vp = { x: W / 2, y: horizon };
+            const COLS = 18, ROWS = 16, speed = (t * 0.35) % (H / ROWS);
+            ctx.save();
+            for (let i = 0; i <= COLS; i++) {
+                const xFrac = i / COLS;
+                ctx.beginPath();
+                ctx.moveTo(vp.x, vp.y);
+                ctx.lineTo(W * xFrac, H);
+                ctx.strokeStyle = `rgba(139,92,246,${0.025 + 0.03 * Math.sin(xFrac * Math.PI)})`;
+                ctx.lineWidth = 0.7;
+                ctx.stroke();
+            }
+            for (let j = 0; j <= ROWS; j++) {
+                const yFrac = j / ROWS;
+                const perspective = Math.pow(yFrac, 2.4);
+                const y = horizon + (H - horizon) * perspective + speed;
+                if (y > H || y < horizon) continue;
+                const alpha = 0.015 + 0.04 * perspective;
+                const xLeft = vp.x - vp.x * perspective;
+                const xRight = vp.x + (W - vp.x) * perspective;
+                ctx.beginPath();
+                ctx.moveTo(xLeft, y);
+                ctx.lineTo(xRight, y);
+                ctx.strokeStyle = `rgba(139,92,246,${alpha})`;
+                ctx.lineWidth = 0.6 + perspective;
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
+
+        function drawKanji() {
+            kanji.forEach(k => {
+                k.y -= k.speed;
+                if (k.y < -0.15) { k.y = 1.15; k.x = randRange(0, 1); k.char = KANJI[Math.floor(Math.random() * KANJI.length)]; }
+                const pulse = 0.5 + 0.5 * Math.sin(t * 0.018 + k.phase);
+                const alpha = k.alpha * (0.5 + pulse * 0.5);
+                ctx.save();
+                ctx.font = `900 ${k.size}px 'Noto Sans JP', serif`;
+                ctx.fillStyle = `rgba(139,92,246,${alpha})`;
+                ctx.fillText(k.char, k.x * W, k.y * H);
+                ctx.restore();
+            });
+        }
+
+        // Ink slash decorations
+        const slashes = Array.from({ length: 6 }, () => ({
+            x: randRange(0.1, 0.9), y: randRange(0.1, 0.9),
+            angle: randRange(-0.6, 0.6),
+            len: randRange(40, 120),
+            alpha: randRange(0.03, 0.08),
+            phase: randRange(0, Math.PI * 2)
+        }));
+        function drawSlashes() {
+            slashes.forEach(s => {
+                const pulse = 0.5 + 0.5 * Math.sin(t * 0.012 + s.phase);
+                const a = s.alpha * pulse;
+                ctx.save();
+                ctx.translate(s.x * W, s.y * H);
+                ctx.rotate(s.angle);
+                // Sword slash line
+                ctx.beginPath();
+                ctx.moveTo(-s.len / 2, 0);
+                ctx.lineTo(s.len / 2, 0);
+                const grad = ctx.createLinearGradient(-s.len/2, 0, s.len/2, 0);
+                grad.addColorStop(0, `rgba(239,68,68,0)`);
+                grad.addColorStop(0.4, `rgba(139,92,246,${a})`);
+                grad.addColorStop(0.6, `rgba(239,68,68,${a * 0.6})`);
+                grad.addColorStop(1, `rgba(239,68,68,0)`);
+                ctx.strokeStyle = grad;
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+                ctx.restore();
+            });
+        }
+
+        const MAX_DIST = 145;
+        function drawNodes() {
+            nodes.forEach(n => {
+                n.x += n.vx; n.y += n.vy; n.z += n.vz;
+                if (n.x < 0 || n.x > W) n.vx *= -1;
+                if (n.y < 0 || n.y > H) n.vy *= -1;
+                if (n.z < 60 || n.z > 500) n.vz *= -1;
+            });
+            const projected = nodes.map(n => ({ ...project(n), node: n }));
+            const sorted = [...projected].sort((a, b) => b.node.z - a.node.z);
+            for (let i = 0; i < sorted.length; i++) {
+                for (let j = i + 1; j < sorted.length; j++) {
+                    const a = sorted[i], b = sorted[j];
+                    const dx = a.sx - b.sx, dy = a.sy - b.sy;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < MAX_DIST) {
+                        const alpha = (1 - dist / MAX_DIST) * 0.1 * a.scale * b.scale * 3;
+                        ctx.beginPath();
+                        ctx.moveTo(a.sx, a.sy);
+                        ctx.lineTo(b.sx, b.sy);
+                        ctx.strokeStyle = `rgba(139,92,246,${alpha})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            sorted.forEach(({ sx, sy, scale, node }) => {
+                const r = node.r * scale * 2.5;
+                const alpha = 0.25 + scale * 0.6;
+                const grd = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 5);
+                grd.addColorStop(0, `rgba(139,92,246,${alpha * 0.4})`);
+                grd.addColorStop(1, 'rgba(139,92,246,0)');
+                ctx.beginPath();
+                ctx.arc(sx, sy, r * 5, 0, Math.PI * 2);
+                ctx.fillStyle = grd;
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(sx, sy, r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(139,92,246,${alpha})`;
+                ctx.fill();
+            });
+            nodes.forEach(n => {
+                const { sx, sy } = project(n);
+                const dx = sx - mouse.x, dy = sy - mouse.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < 200) {
+                    ctx.beginPath();
+                    ctx.moveTo(mouse.x, mouse.y);
+                    ctx.lineTo(sx, sy);
+                    ctx.strokeStyle = `rgba(139,92,246,${(1 - dist/200) * 0.4})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            });
+        }
+
+        function drawVignette() {
+            // Dark vignette with slight purple tint
+            const vgrd = ctx.createRadialGradient(W/2, H/2, H*0.25, W/2, H/2, H*0.9);
+            vgrd.addColorStop(0, 'rgba(0,0,0,0)');
+            vgrd.addColorStop(1, 'rgba(2,0,10,0.65)');
+            ctx.fillStyle = vgrd;
+            ctx.fillRect(0, 0, W, H);
+        }
+
+        function draw() {
+            t++;
+            ctx.fillStyle = 'rgba(6,6,14,0.5)';
+            ctx.fillRect(0, 0, W, H);
+            drawGrid();
+            drawKanji();
+            drawSlashes();
+            drawNodes();
+            drawVignette();
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', () => { resize(); createNodes(); });
+        window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+        resize();
+        createNodes();
+        draw();
+    })();
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOJI PANEL - XIT | Painel para Free Fire atualizado 2026</title>
+    <meta name="description" content="O painel mais poderoso do Free Fire. Poder do Toji nas suas mãos. +10.000 players já dominaram o jogo!">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --primary-dark: #7c3aed;
+            --primary-glow: rgba(139, 92, 246, 0.5);
+            --primary-soft: rgba(139, 92, 246, 0.15);
+            --red: #ef4444;
+            --red-glow: rgba(239, 68, 68, 0.5);
+            --gold: #eab308;
+            --bg: #06060e;
+            --bg2: #0d0b18;
+            --surface: #110f1e;
+            --surface2: #1a1730;
+            --border: #2a2545;
+            --text-muted: #9ca3af;
+            --text-dim: #6b7280;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Rajdhani', 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .banner-verde, .sales-counter, .notifications,
+        .hero, .features, .testimonials, .packages,
+        .guarantee, .faq, footer, .sticky-cta {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ====== ANIMATIONS ====== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse-slow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
+        @keyframes pulse-scale { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes bounce-subtle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        @keyframes glow-purple {
+            0%, 100% { box-shadow: 0 0 30px var(--primary-glow); }
+            50% { box-shadow: 0 0 70px var(--primary-glow), 0 0 120px rgba(139,92,246,0.3); }
+        }
+        @keyframes slide-in {
+            from { transform: translateX(-400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes neon-purple {
+            0%, 100% {
+                box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+                border: 2px solid var(--primary);
+            }
+            50% {
+                box-shadow: 0 0 20px var(--primary), 0 0 45px var(--primary), 0 0 65px rgba(139,92,246,0.5);
+                border: 2px solid var(--primary-dark);
+            }
+        }
+        @keyframes neon-yellow {
+            0%, 100% {
+                box-shadow: 0 0 10px #eab308, 0 0 20px #eab308, 0 0 30px #eab308;
+                border: 2px solid #eab308;
+            }
+            50% {
+                box-shadow: 0 0 20px #f59e0b, 0 0 40px #f59e0b, 0 0 60px #f59e0b;
+                border: 2px solid #fbbf24;
+            }
+        }
+        @keyframes cursed-flicker {
+            0%, 95%, 100% { opacity: 1; }
+            96% { opacity: 0.4; }
+            97% { opacity: 1; }
+            98% { opacity: 0.2; }
+        }
+        @keyframes ink-drip {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 0% 100%; }
+        }
+
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 20s ease-in-out infinite; }
+        .animate-pulse-scale { animation: pulse-scale 2s ease-in-out infinite; }
+        .animate-bounce-subtle { animation: bounce-subtle 3s infinite; }
+        .animate-glow { animation: glow-purple 2s infinite; }
+        .animate-neon-purple { animation: neon-purple 2s ease-in-out infinite; }
+        .animate-neon-yellow { animation: neon-yellow 2s ease-in-out infinite; }
+
+        /* ====== BANNER ====== */
+        .banner-verde {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: linear-gradient(to right, #4c1d95, #7c3aed, #6d28d9, #7c3aed, #4c1d95);
+            color: white;
+            text-align: center;
+            padding: 12px 16px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            border-bottom: 1px solid rgba(139,92,246,0.4);
+            text-transform: uppercase;
+        }
+        .banner-verde .destaque {
+            color: #c4b5fd;
+            font-weight: 900;
+            text-shadow: 0 0 12px rgba(139,92,246,0.8);
+        }
+
+        /* ====== SALES COUNTER ====== */
+        .sales-counter {
+            position: fixed;
+            top: 72px; right: 16px;
+            z-index: 999;
+            background: rgba(6,6,14,0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(139,92,246,0.3);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 9999px;
+            font-weight: bold;
+            font-size: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 20px rgba(139,92,246,0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: grab;
+            user-select: none;
+        }
+        .sales-counter.dragging { cursor: grabbing; }
+        .sales-counter .fire-icon { color: var(--primary); width: 14px; height: 14px; }
+        .sales-counter .count { color: var(--primary); font-variant-numeric: tabular-nums; }
+
+        /* ====== NOTIFICATIONS ====== */
+        .notifications {
+            position: fixed;
+            bottom: 16px; left: 16px;
+            z-index: 999;
+            max-width: 320px;
+            pointer-events: none;
+        }
+        @keyframes notif-in {
+            from { transform: translateX(-120%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes notif-out {
+            from { transform: translateX(0); opacity: 1; max-height: 100px; margin-bottom: 8px; }
+            to { transform: translateX(-120%); opacity: 0; max-height: 0; margin-bottom: 0; }
+        }
+        .notification {
+            background: rgba(13,11,24,0.97);
+            border: 1px solid rgba(139,92,246,0.3);
+            border-left: 3px solid var(--primary);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(139,92,246,0.08);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(12px);
+            animation: notif-in 0.45s cubic-bezier(0.22,1,0.36,1) forwards;
+            overflow: hidden;
+        }
+        .notification.removing { animation: notif-out 0.4s ease forwards; }
+        .notif-avatar {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 15px;
+            color: #fff;
+            flex-shrink: 0;
+            text-transform: uppercase;
+        }
+        .notif-body { flex: 1; min-width: 0; }
+        .notif-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            margin-bottom: 2px;
+        }
+        .notif-name { font-weight: 700; font-size: 13px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .notif-time { font-size: 10px; color: #4b5563; flex-shrink: 0; white-space: nowrap; }
+        .notif-product { font-size: 12px; color: #d1d5db; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; }
+        .notif-footer { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #6b7280; }
+        .notif-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+            animation: pulse-scale 1.5s infinite;
+        }
+        .notif-badge {
+            display: inline-block;
+            background: rgba(139,92,246,0.15);
+            color: var(--primary);
+            font-size: 10px;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 9999px;
+            border: 1px solid rgba(139,92,246,0.3);
+        }
+
+        /* ====== HERO ====== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 96px 16px 64px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(139,92,246,0.08), rgba(109,40,217,0.03), transparent);
+        }
+        /* Ink crack effect top */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: linear-gradient(to right, transparent, var(--primary), var(--red), var(--primary), transparent);
+            opacity: 0.7;
+            animation: cursed-flicker 4s ease-in-out infinite;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .logo-container { margin-bottom: 32px; position: relative; }
+        .logo {
+            width: 200px;
+            max-width: 90%;
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 24px rgba(139,92,246,0.6)) drop-shadow(0 25px 25px rgba(0,0,0,0.5));
+        }
+        .logo-kanji {
+            position: absolute;
+            top: -10px; right: calc(50% - 140px);
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgba(139,92,246,0.3);
+            line-height: 1;
+            pointer-events: none;
+        }
+        .logo-kanji-left {
+            left: calc(50% - 140px);
+            right: auto;
+            color: rgba(239,68,68,0.2);
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.8rem, 11vw, 5.5rem);
+            font-weight: 400;
+            margin-bottom: 24px;
+            line-height: 1;
+            letter-spacing: 0.04em;
+        }
+        .text-neon {
+            color: var(--primary);
+            filter: drop-shadow(0 0 10px var(--primary)) drop-shadow(0 0 20px rgba(139,92,246,0.5));
+        }
+        .text-neon-red {
+            color: var(--red);
+            filter: drop-shadow(0 0 10px var(--red)) drop-shadow(0 0 20px rgba(239,68,68,0.4));
+        }
+
+        .benefits { font-size: 1.125rem; color: #d1d5db; margin-bottom: 32px; font-weight: 600; }
+        .benefits p { margin-bottom: 8px; }
+
+        .user-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(139,92,246,0.1);
+            border: 2px solid var(--primary);
+            padding: 12px 24px;
+            border-radius: 9999px;
+            margin-bottom: 32px;
+            box-shadow: 0 0 20px rgba(139,92,246,0.2);
+        }
+
+        .video-placeholder {
+            max-width: 896px;
+            margin: 0 auto 32px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            transition: transform 0.5s;
+        }
+        .video-placeholder:hover { transform: scale(1.02); }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6, #6d28d9);
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding: 20px 52px;
+            border-radius: 4px;
+            text-decoration: none;
+            box-shadow: 0 25px 50px -12px rgba(139,92,246,0.5), 0 0 40px rgba(139,92,246,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            letter-spacing: 0.12em;
+            clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+        .cta-button:hover { transform: scale(1.07); box-shadow: 0 30px 60px -12px rgba(139,92,246,0.6), 0 0 60px rgba(139,92,246,0.4); }
+        .cta-button:hover::before { left: 100%; }
+
+        /* ====== FEATURES ====== */
+        .features {
+            padding: 80px 16px;
+            background: linear-gradient(to bottom, transparent, var(--bg2));
+        }
+        .features-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 0.05em;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 48px;
+            color: white;
+        }
+        .features-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 40px 28px 36px;
+            transition: all 0.4s;
+            text-align: center;
+            clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+            position: relative;
+        }
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .feature-card:hover { border-color: var(--primary); transform: translateY(-8px); }
+        .feature-card:hover::after { opacity: 1; }
+        .feature-card--highlight {
+            border: 2px solid var(--primary);
+            background: #110e1f;
+            box-shadow: 0 0 32px rgba(139,92,246,0.15), inset 0 0 40px rgba(139,92,246,0.04);
+        }
+        .feature-card--highlight:hover { box-shadow: 0 0 48px rgba(139,92,246,0.3); }
+        .feature-icon {
+            width: 80px; height: 80px;
+            margin: 0 auto 28px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(139,92,246,0.4);
+            clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+        }
+        .feature-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            color: white;
+        }
+        .feature-card p { color: var(--text-muted); text-align: center; line-height: 1.7; font-size: 0.95rem; }
+
+        /* ====== TESTIMONIALS ====== */
+        .testimonials { padding: 64px 16px; }
+        .testimonials h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .testimonials-subtitle { color: var(--text-muted); text-align: center; margin-bottom: 48px; font-size: 1.125rem; }
+
+        .carousel-wrapper { max-width: 480px; margin: 0 auto; position: relative; }
+        .carousel-track-container {
+            overflow: hidden;
+            border-radius: 4px;
+            border: 2px solid rgba(139,92,246,0.35);
+            box-shadow: 0 25px 50px -12px rgba(139,92,246,0.2);
+            background: var(--surface);
+            position: relative;
+            /* Altura fixa: todos os slides ficam no mesmo box no mobile */
+            height: min(78vw, 500px);
+        }
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+            transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+        .carousel-slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            background: var(--surface);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            color: white;
+            width: 44px; height: 44px;
+            border-radius: 2px;
+            border: none;
+            font-size: 22px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+        }
+        .carousel-btn:hover { transform: translateY(-50%) scale(1.12); box-shadow: 0 6px 20px rgba(139,92,246,0.4); }
+        .carousel-btn.prev { left: -22px; }
+        .carousel-btn.next { right: -22px; }
+        @media (max-width: 540px) { .carousel-btn.prev { left: 4px; } .carousel-btn.next { right: 4px; } }
+
+        .carousel-dots { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+        .carousel-dot {
+            width: 10px; height: 10px;
+            border-radius: 2px;
+            background: var(--border);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 0;
+        }
+        .carousel-dot.active { background: var(--primary); width: 28px; }
+        .carousel-counter { text-align: center; margin-top: 12px; font-size: 13px; color: var(--text-dim); }
+        .carousel-counter span { color: var(--primary); font-weight: 700; }
+
+        .stats-card {
+            background: linear-gradient(135deg, #4c1d95, #7c3aed, #6d28d9);
+            border-radius: 4px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 32px;
+            clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+            box-shadow: 0 20px 40px rgba(139,92,246,0.3);
+        }
+        .stats-number { font-family: 'Bebas Neue', sans-serif; font-size: 4.5rem; font-weight: 400; color: white; margin-bottom: 8px; letter-spacing: 0.05em; }
+        .stats-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; font-weight: 400; color: white; letter-spacing: 0.08em; }
+        .stats-subtext { color: rgba(255,255,255,0.8); font-weight: 600; margin-top: 8px; }
+
+        /* ====== PACKAGES ====== */
+        .packages { padding: 80px 16px; }
+        .packages h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .packages-subtitle { color: var(--text-muted); text-align: center; margin-bottom: 48px; font-size: 1.125rem; }
+        .packages-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 32px; }
+
+        .package-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            padding: 32px;
+            transition: all 0.5s;
+            position: relative;
+            clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+        }
+        .package-card:hover { border-color: var(--primary); transform: translateY(-12px); box-shadow: 0 20px 60px rgba(139,92,246,0.2); }
+        .package-card.vip { border-color: var(--gold); }
+        .package-card.vip:hover { border-color: #fbbf24; box-shadow: 0 20px 60px rgba(234,179,8,0.2); }
+
+        .package-badge {
+            position: absolute;
+            top: -16px; left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to right, var(--gold), #f59e0b);
+            color: black;
+            padding: 8px 24px;
+            border-radius: 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+        }
+
+        .package-icon {
+            width: 96px; height: 96px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(139,92,246,0.3);
+            clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+        }
+        .package-card.vip .package-icon {
+            background: linear-gradient(135deg, var(--gold), #f59e0b);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(234,179,8,0.3);
+        }
+
+        .package-title { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; font-weight: 400; letter-spacing: 0.08em; text-align: center; margin-bottom: 8px; color: var(--primary); }
+        .package-card.vip .package-title { color: var(--gold); }
+        .package-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 24px; font-weight: 600; }
+        .package-features { list-style: none; margin-bottom: 32px; }
+        .package-features li { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px; font-size: 14px; font-weight: 600; }
+        .package-features svg { flex-shrink: 0; margin-top: 4px; }
+
+        .package-pricing { text-align: center; margin-bottom: 24px; }
+        .package-old-price { color: var(--red); text-decoration: line-through; font-size: 1.25rem; font-weight: 700; }
+        .package-label { color: var(--text-muted); font-size: 14px; }
+        .package-price { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; font-weight: 400; color: var(--primary); letter-spacing: 0.05em; }
+        .package-card.vip .package-price { color: var(--gold); }
+
+        .package-button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            padding: 18px;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+        }
+        .package-button:hover { transform: scale(1.03); box-shadow: 0 10px 30px rgba(139,92,246,0.4); }
+        .package-card.vip .package-button { background: linear-gradient(135deg, #ca8a04, var(--gold)); color: black; }
+
+        /* ====== GUARANTEE ====== */
+        .guarantee { padding: 80px 16px; background: linear-gradient(to bottom, transparent, var(--bg2)); }
+        .guarantee-content { max-width: 896px; margin: 0 auto; text-align: center; }
+        .guarantee-badge {
+            width: 160px; height: 160px;
+            margin: 0 auto 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 25px 50px -12px rgba(139,92,246,0.5), 0 0 60px rgba(139,92,246,0.2);
+        }
+        .guarantee-badge-number { font-family: 'Bebas Neue', sans-serif; font-size: 4.5rem; font-weight: 400; color: white; letter-spacing: 0.02em; }
+        .guarantee-badge-text { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.9); }
+        .guarantee h2 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; font-weight: 400; letter-spacing: 0.06em; margin-bottom: 24px; }
+        .guarantee p { font-size: 1.125rem; color: #d1d5db; margin-bottom: 32px; line-height: 1.7; max-width: 672px; margin-left: auto; margin-right: auto; }
+        .guarantee-features { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; font-size: 14px; font-weight: 600; }
+        .guarantee-feature { display: flex; align-items: center; gap: 8px; }
+
+        /* ====== FAQ ====== */
+        .faq { padding: 80px 16px; }
+        .faq h2 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; font-weight: 400; letter-spacing: 0.06em; text-align: center; margin-bottom: 48px; }
+        .faq-container { max-width: 896px; margin: 0 auto; }
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+            clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+        }
+        .faq-item:hover { border-color: var(--primary); }
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            background: none;
+            border: none;
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            letter-spacing: 0.03em;
+        }
+        .faq-question:hover { background: rgba(139,92,246,0.05); }
+        .faq-icon { color: var(--primary); transition: transform 0.3s; }
+        .faq-icon.open { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .faq-answer.open { max-height: 500px; padding: 0 24px 20px; }
+        .faq-answer p { color: var(--text-muted); line-height: 1.625; font-weight: 500; }
+
+        /* ====== FOOTER ====== */
+        footer {
+            padding: 60px 16px 40px;
+            border-top: 1px solid rgba(139,92,246,0.2);
+            background: linear-gradient(to bottom, var(--bg), #020208);
+        }
+        .footer-content { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; }
+        .footer-logo-wrap { display: flex; justify-content: center; }
+        .footer-logo {
+            width: 140px; max-width: 70%; height: auto;
+            filter: drop-shadow(0 0 16px rgba(139,92,246,0.4));
+            border-radius: 50%;
+            border: 2px solid rgba(139,92,246,0.3);
+        }
+        .footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.15em; color: var(--primary); }
+
+        .footer-saiba-btn {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            padding: 14px 36px;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(139,92,246,0.35);
+            clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+        }
+        .footer-saiba-btn:hover { transform: scale(1.05); box-shadow: 0 6px 28px rgba(139,92,246,0.5); }
+        .footer-about { max-height: 0; overflow: hidden; transition: max-height 0.5s, opacity 0.4s; opacity: 0; max-width: 620px; }
+        .footer-about.open { max-height: 600px; opacity: 1; }
+        .footer-about p { color: var(--text-muted); font-size: 14px; line-height: 1.75; margin-bottom: 16px; text-align: center; }
+        .footer-copyright { color: var(--text-dim); font-size: 13px; }
+        .footer-insta {
+            width: 44px; height: 44px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer-insta:hover { background: var(--primary); border-color: var(--primary); }
+
+        /* ====== MISC ====== */
+        .icon { width: 24px; height: 24px; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+
+        .cta-social-proof { margin-top: 20px; display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; font-size: 14px; color: rgba(229,231,235,0.92); font-weight: 600; }
+        .cta-social-proof .row { display: flex; align-items: center; gap: 10px; }
+
+        /* ====== STICKY CTA ====== */
+        .sticky-cta { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9996; display: none; }
+        .sticky-cta.show { display: block; animation: sticky-slide-up 0.5s ease-out; }
+        @keyframes sticky-slide-up {
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+        .sticky-cta a {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            padding: 14px 24px;
+            border-radius: 2px;
+            text-decoration: none;
+            box-shadow: 0 25px 50px -12px rgba(139,92,246,0.5);
+            letter-spacing: 0.1em;
+            font-size: 15px;
+            clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+        }
+
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 480px) { h1 { font-size: clamp(2.2rem, 12vw, 3rem); } }
+        @media (min-width: 768px) {
+            .logo { width: 220px; }
+            .features-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+            .packages-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* ====== DIVIDER ====== */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(139,92,246,0.3), rgba(239,68,68,0.2), rgba(139,92,246,0.3), transparent);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Banner -->
+    <div class="banner-verde">
+        <p>⚔️ Desconto só <span class="destaque" id="data-atual">HOJE</span> nessa página <span class="destaque" id="data-display"></span> ⚔️</p>
+    </div>
+
+    <!-- Sales Counter -->
+    <div class="sales-counter" id="sales-counter">
+        <svg class="fire-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+        </svg>
+        <span><span class="count" id="sales-count">252</span> vendas hoje!</span>
+    </div>
+
+    <!-- Notifications -->
+    <div class="notifications" id="notifications"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg animate-pulse-slow"></div>
+        <div class="hero-content">
+
+            <div class="logo-container animate-float">
+                <!-- 
+                    IMAGEM: coloque o arquivo "Jujutsu_kaisen_Toji.jfif" na mesma pasta do HTML 
+                    ou ajuste o caminho abaixo conforme necessário.
+                -->
+                <span class="logo-kanji logo-kanji-left">殺</span>
+                <img src="Jujutsu_kaisen_Toji.jfif" alt="Toji Panel XIT Logo" class="logo">
+                <span class="logo-kanji">呪</span>
+            </div>
+
+            <h1>
+                PODER DO <span class="text-neon">ASSASSINO</span><br>
+                <span class="text-neon-red">DE DEUSES!</span>
+            </h1>
+
+            <div class="benefits">
+                <p>⚔️ Painel com + <strong style="color: var(--primary);">10 mil Players</strong> Ativos</p>
+                <p>🩸 Sua mira vai dar só <span style="color: var(--red); font-weight: 700;">vermelho!</span> Com Toji Panel XIT!</p>
+            </div>
+
+            <div class="user-counter animate-pulse-scale">
+                <svg class="icon" style="color: var(--primary);" width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span><strong style="color: var(--primary); font-size: 1.25rem;" id="user-count">998</strong> <span style="color: #d1d5db;">Players online agora!</span></span>
+            </div>
+
+            <!-- Video -->
+            <div class="video-placeholder">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/ogux2f6klj.js" async type="module"></script>
+                <style>
+                    wistia-player[media-id='ogux2f6klj']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ogux2f6klj/swatch');
+                        display: block; filter: blur(5px); padding-top: 56.25%;
+                    }
+                </style>
+                <wistia-player media-id="ogux2f6klj" aspect="1.7777777777777777"></wistia-player>
+            </div>
+
+            <a href="#pacotes" class="cta-button animate-glow">
+                ⚔️ QUERO MEU PAINEL AGORA!
+            </a>
+
+            <div class="cta-social-proof">
+                <div class="row">
+                    <span>⭐</span>
+                    <span><strong>Avaliação:</strong> 4.9/5 estrelas (baseado em <strong>+5.000 avaliações</strong>)</span>
+                </div>
+                <div class="row">
+                    <span>🏆</span>
+                    <span><strong>Eleito</strong> o melhor painel XIT do Brasil por <strong>3 anos consecutivos</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Features -->
+    <section class="features">
+        <h2 class="features-title">Por que <span class="text-neon">15.000+ players</span> escolheram nosso painel?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+                        <line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
+                        <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
+                    </svg>
+                </div>
+                <h3>AIMBOT LEGIT</h3>
+                <p>Mira que gruda na cabeça com suavidade natural. Seus amigos vão achar que você apenas treinou muito.</p>
+            </div>
+            <div class="feature-card feature-card--highlight">
+                <div class="feature-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0.5">
+                        <path d="M12 2C7.58 2 4 5.58 4 10v10l2.5-2 2.5 2 2.5-2 2.5 2 2.5-2 2.5 2V10c0-4.42-3.58-8-8-8z"/>
+                        <circle cx="9" cy="10" r="1.2" fill="#8b5cf6" stroke="none"/>
+                        <circle cx="15" cy="10" r="1.2" fill="#8b5cf6" stroke="none"/>
+                    </svg>
+                </div>
+                <h3>BYPASS ANTI-BAN</h3>
+                <p>Sistema de segurança de nível militar. Jogue na sua conta principal sem medo de blacklists.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+                        <line x1="8" y1="7" x2="6" y2="5"/><line x1="16" y1="7" x2="18" y2="5"/>
+                        <rect x="5" y="3.5" width="4" height="2.5" rx="1" fill="white" stroke="none"/>
+                        <rect x="15" y="3.5" width="4" height="2.5" rx="1" fill="white" stroke="none"/>
+                    </svg>
+                </div>
+                <h3>SISTEMA STEALTH</h3>
+                <p>Sistema de disfarce indetectável. Jogue com segurança total, sem riscos de banimento ou blacklist.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>Veja o que <span class="text-neon">Nossos Players</span> Dizem</h2>
+        <p class="testimonials-subtitle">Feedbacks reais de quem já está dominando!</p>
+
+        <div class="carousel-wrapper">
+            <div class="carousel-track-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img src="img site/pvsocial (8).jpg" alt="Feedback 1" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (1).PNG" alt="Feedback 2" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (2).jpg" alt="Feedback 3" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (10).jpg" alt="Feedback 4" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (11).jpg" alt="Feedback 5" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (12).jpg" alt="Feedback 6" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (3).jpg" alt="Feedback 7" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (5).jpg" alt="Feedback 8" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (6).jpg" alt="Feedback 9" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (7).jpg" alt="Feedback 10" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="img site/pvsocial (9).jpg" alt="Feedback 11" loading="lazy"></div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8249;</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Próximo">&#8250;</button>
+            <div class="carousel-dots" id="carouselDots"></div>
+            <p class="carousel-counter"><span id="carouselCurrent">1</span> / <span id="carouselTotal">11</span></p>
+        </div>
+
+        <div style="max-width:480px; margin: 0 auto;">
+            <div class="stats-card">
+                <p class="stats-number">10.000+</p>
+                <p class="stats-text">Alunos Satisfeitos</p>
+                <p class="stats-subtext">E você será o próximo!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Packages -->
+    <section id="pacotes" class="packages">
+        <h2>Escolha Seu <span class="text-neon">Plano</span> Abaixo</h2>
+        <p class="packages-subtitle">Todos os planos incluem suporte e garantia</p>
+        <div class="packages-grid">
+
+            <!-- ANDROID -->
+            <div class="package-card">
+                <div class="package-icon" style="background:#110f1e; border:3px solid var(--primary); box-shadow:0 0 24px rgba(139,92,246,0.4); clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); overflow:hidden;">
+                    <img src="img site/android.png" alt="Android" style="width:80%;height:80%;object-fit:contain;filter:drop-shadow(0 0 8px var(--primary));">
+                </div>
+                <h3 class="package-title">ANDROID</h3>
+                <p class="package-subtitle">O painel mais vendido para Android!</p>
+                <ul class="package-features">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Painel Mod Menu FFH4X</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Função HS pescoço + Bypass</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Mira automática 100% capa</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>2x Automática</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Rastreamento de cabeça</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP AUTOMÁTICA</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira que gruda</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Disfarce 100% indetectável</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Com disfarce pra não levar Ban!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Instalar sem precisar de PC</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Sensi VIP Fullcapa</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Tutorial de Instalação fácil e rápida</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso ao Painel XIT na Hora!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>100% Anti-Ban/Anti-Blacklist!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Nosso ZAP seu Suporte pessoal</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>7 Dias de garantia total</span></li>
+                </ul>
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 147,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price">R$ 29,90</p>
+                </div>
+                <a href="https://ggcheckout.app/checkout/v5/G7giUpjRgJ9dT1v0xEoJ" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
+            </div>
+
+            <!-- IPHONE -->
+            <div class="package-card">
+                <div class="package-icon" style="background:#110f1e; border:3px solid var(--primary); box-shadow:0 0 24px rgba(139,92,246,0.4); clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); overflow:hidden;">
+                    <img src="img site/iphone.png" alt="iPhone/iOS" style="width:80%;height:80%;object-fit:contain;filter:drop-shadow(0 0 8px var(--primary));">
+                </div>
+                <h3 class="package-title">IPHONE/IOS</h3>
+                <p class="package-subtitle">O painel mais vendido para iPhone/iOS!</p>
+                <ul class="package-features">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Painel Mod Menu FFH4X</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Função HS pescoço + Bypass</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>Mira automática 100% capa</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>2x Automática</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Rastreamento de cabeça</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP AUTOMÁTICA</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira que gruda</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Disfarce 100% indetectável</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Com disfarce pra não levar Ban!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Instalar sem precisar de PC</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Sensi VIP Fullcapa</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Tutorial de Instalação fácil e rápida</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso ao Painel XIT na Hora!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>100% Anti-Ban/Anti-Blacklist!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Nosso ZAP seu Suporte pessoal</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>7 Dias de garantia total</span></li>
+                </ul>
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 197,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price">R$ 29,90</p>
+                </div>
+                <a href="https://ggcheckout.app/checkout/v5/p4f9r2o62EbYgbI7SRz6" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
+            </div>
+
+            <!-- VIP CLT -->
+            <div class="package-card vip">
+                <div class="package-badge">👑 Mais Popular!</div>
+                <div class="package-icon" style="background:#110f1e; border:3px solid var(--gold); box-shadow:0 0 24px rgba(234,179,8,0.4); overflow:hidden; clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);">
+                    <img src="img site/CLT.jpg" alt="Painel CLT Premium" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <h3 class="package-title">PAINEL CLT PREMIUM</h3>
+                <p class="package-subtitle" style="color:var(--gold);font-weight:700;">ANDROID/IPHONE + ACESSO VITALÍCIO</p>
+                <ul class="package-features">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>PAINEL CLT Mod Menu FFH4X</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>2x Xitada + 2x Automática</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>No Recoil (não espirra tiros)</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Rastreamento de cabeça avançado</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Função HS pescoço + Bypass</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP automática premium</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira automática Fullcapa</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Disfarce 100% indetectável</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira que gruda!</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Suporte VIP Exclusivo 24h/7</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Bônus Atualizações vitalícias</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso antecipado de Atualizações</span></li>
+                    <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Garantia total de 30 Dias!</span></li>
+                </ul>
+                <div class="package-pricing">
+                    <p class="package-old-price">De R$ 297,90</p>
+                    <p class="package-label">Por apenas</p>
+                    <p class="package-price" style="color:var(--gold);">R$ 19,99</p>
+                </div>
+                <a href="https://ggcheckout.app/checkout/v5/tMcpaEo5DlioibdUy2Tv" target="_blank" class="package-button animate-neon-yellow" style="display:block;text-align:center;text-decoration:none;">👑 QUERO SER VIP!</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="guarantee-content">
+            <div class="guarantee-badge" style="background:none;box-shadow:none;border:none;width:200px;height:200px;">
+                <img src="img site/garantia.webp" alt="Garantia" style="width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 24px rgba(139,92,246,0.5));">
+            </div>
+            <h2>Garantia <span class="text-neon">Total</span> de Satisfação</h2>
+            <p>Experimente o painel por 7 dias completos. Se por qualquer motivo você não ficar 100% satisfeito com os resultados, devolvemos seu dinheiro integralmente. Sem perguntas, sem burocracia.</p>
+            <div class="guarantee-features">
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke:var(--primary);"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Reembolso em até 24h</span>
+                </div>
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke:var(--primary);"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Sem perguntas</span>
+                </div>
+                <div class="guarantee-feature">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" style="stroke:var(--primary);"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Compra 100% segura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <h2>Perguntas <span class="text-neon">Frequentes</span></h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(0)">
+                    <span>PAINEL XIT FUNCIONA PARA INICIANTES?</span>
+                    <svg class="icon faq-icon" id="faq-icon-0" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-0">
+                    <p>Sim! Qualquer pessoa pode instalar em minutos. Tutorial simples e sem complicações, funciona em Android ou iPhone/iOS.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(1)">
+                    <span>COMO RECEBO O PAINEL APÓS A COMPRA?</span>
+                    <svg class="icon faq-icon" id="faq-icon-1" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-1">
+                    <p>Entrega instantânea! Assim que o pagamento for aprovado, você recebe automaticamente todos os arquivos e instruções no seu email. Pagou, já pode começar a usar o seu XIT!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(2)">
+                    <span>A INSTALAÇÃO É COMPLICADA?</span>
+                    <svg class="icon faq-icon" id="faq-icon-2" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-2">
+                    <p><strong>Instalação super simples!</strong> O processo leva menos de 5 minutos. Incluímos tutorial em vídeo passo a passo e nossa equipe de suporte está disponível 24h para ajudar.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(3)">
+                    <span>É REALMENTE 100% ANTI-BAN?</span>
+                    <svg class="icon faq-icon" id="faq-icon-3" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-3">
+                    <p><strong>100% Anti-ban garantido!</strong> Nosso sistema é indetectável e já está sendo usado por mais de 10.000 players sem problemas. Caso aconteça algo, reembolsamos tudo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="#pacotes">⚔️ GARANTIR MINHA VAGA</a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-logo-wrap">
+                <!--
+                    IMAGEM: coloque "toji_pfp.jfif" na mesma pasta do HTML
+                -->
+                <img src="toji_pfp.jfif" alt="Toji Panel XIT" class="footer-logo">
             </div>
             <p class="footer-brand">TOJI PANEL - XIT</p>
 
