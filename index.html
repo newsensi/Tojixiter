@@ -670,6 +670,73 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
             transform: skewX(-20deg);
             animation: shine-sweep 2.6s ease-in-out infinite;
         }
+        /* Mesma forma/formato do botão verde, só muda a cor pra dourado (plano VIP) */
+        @keyframes glow-gold-pulse {
+            0%, 100% { box-shadow: 0 8px 24px rgba(202,138,4,0.45), 0 0 24px rgba(250,204,21,0.35); }
+            50% { box-shadow: 0 10px 32px rgba(202,138,4,0.6), 0 0 42px rgba(250,204,21,0.55); }
+        }
+        .btn-comprar-dourado {
+            background: linear-gradient(135deg, #facc15, #ca8a04);
+            color: #1a1204;
+            animation: glow-gold-pulse 2.2s ease-in-out infinite;
+        }
+
+        /* ====== SELOS DE SEGURANÇA / MICROCOPY ====== */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+            margin-top: 14px;
+            font-size: 11.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        .trust-badges span { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+
+        /* ====== WHATSAPP FLUTUANTE ====== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 16px; right: 16px;
+            z-index: 9997;
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 0 rgba(37,211,102,0.6);
+            animation: whatsapp-pulse 2.2s ease-in-out infinite;
+            text-decoration: none;
+        }
+        @keyframes whatsapp-pulse {
+            0%, 100% { box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 0 rgba(37,211,102,0.5); }
+            50% { box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 10px rgba(37,211,102,0); }
+        }
+        .whatsapp-float:hover { transform: scale(1.08); }
+        @media (max-width: 480px) { .whatsapp-float { width: 50px; height: 50px; bottom: 12px; right: 12px; } }
+
+        /* ====== VER MAIS RECURSOS ====== */
+        .features-extra { list-style: none; max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .features-extra.aberto { max-height: 1200px; }
+        .ver-mais-btn {
+            width: 100%;
+            background: none;
+            border: 1px dashed var(--border);
+            color: var(--primary);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .ver-mais-btn:hover { border-color: var(--primary); background: rgba(139,92,246,0.06); }
+        .package-card.vip .ver-mais-btn { color: var(--gold); }
+        .package-card.vip .ver-mais-btn:hover { border-color: var(--gold); background: rgba(234,179,8,0.06); }
 
         /* ====== SISTEMA REVELAR OFERTA ====== */
         .oferta-wrapper { margin-bottom: 24px; text-align: center; }
@@ -897,7 +964,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
 
     <!-- Banner -->
     <div class="banner-verde">
-        <p>Desconto só <span class="destaque" id="data-atual">HOJE</span> nessa página <span class="destaque" id="data-display"></span> </p>
+        <p>⚔️ Oferta acaba em <span class="destaque" id="countdown-timer">23:59:59</span> ⚔️</p>
     </div>
 
     <!-- Sales Counter -->
@@ -932,7 +999,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
             </h1>
 
             <div class="benefits">
-                <p>⚔️ Painel com + <strong style="color: var(--primary);">1 mil Players</strong> Ativos</p>
+                <p>⚔️ Painel com + <strong style="color: var(--primary);">10 mil Players</strong> Ativos</p>
                 <p>🩸 Sua mira vai dar só <span style="color: var(--red); font-weight: 700;">vermelho!</span> Com Panel XIT!</p>
             </div>
 
@@ -965,7 +1032,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
             <div class="cta-social-proof">
                 <div class="row">
                     <span>⭐</span>
-                    <span><strong>Avaliação:</strong> 4.9/5 estrelas (baseado em <strong>+1.000 avaliações</strong>)</span>
+                    <span><strong>Avaliação:</strong> 4.9/5 estrelas (baseado em <strong>+5.000 avaliações</strong>)</span>
                 </div>
                 <div class="row">
                     <span>🏆</span>
@@ -979,7 +1046,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
 
     <!-- Features -->
     <section class="features">
-        <h2 class="features-title">Por que + <span class="text-neon">1.000 players</span> escolheram nosso painel?</h2>
+        <h2 class="features-title">Por que <span class="text-neon">15.000+ players</span> escolheram nosso painel?</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
@@ -1031,7 +1098,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                 <div class="carousel-track" id="carouselTrack">
                     <div class="carousel-slide">
                         <video controls playsinline preload="metadata" poster="img site/depoimento-poster.jpg" style="width:100%;height:100%;object-fit:contain;background:#000;">
-                            <source src="img site/video especial de depoimento do cliente.MP4" type="video/mp4">
+                            <source src="img site/depoimento.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-slide"><img src="img site/prova01.jpg" alt="Depoimento de cliente 1" loading="lazy"></div>
@@ -1048,7 +1115,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
 
         <div style="max-width:480px; margin: 0 auto;">
             <div class="stats-card">
-                <p class="stats-number">1.000+</p>
+                <p class="stats-number">10.000+</p>
                 <p class="stats-text">Alunos Satisfeitos</p>
                 <p class="stats-subtext">E você será o próximo!</p>
             </div>
@@ -1077,6 +1144,8 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>XIT via WI-FI (PAINEL VIA WI-FI)</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Rastreamento de cabeça</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP AUTOMÁTICA</span></li>
+                </ul>
+                <ul class="package-features features-extra" id="extra-android">
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
@@ -1093,6 +1162,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Nosso ZAP como seu Suporte pessoal</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>7 Dias de garantia total</span></li>
                 </ul>
+                <button class="ver-mais-btn" onclick="toggleExtra('android', this)">Ver mais recursos &#9662;</button>
                 <div class="oferta-wrapper">
                     <p class="texto-oferta-principal">
                         Você vai investir um valor menor que uma pizza! <br>
@@ -1101,6 +1171,11 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
                     <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
                     <a href="https://ggcheckout.app/checkout/v5/6h2AaJ1Pm256ijSFQay8" target="_blank" class="btn-comprar-verde">🛒 COMPRAR AGORA!</a>
+                    <div class="trust-badges">
+                        <span>🔒 Compra 100% segura</span>
+                        <span>⚡ Entrega imediata</span>
+                        <span>💳 Pix / Cartão</span>
+                    </div>
                 </div>
             </div>
 
@@ -1118,6 +1193,8 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#ef4444" style="flex-shrink:0;margin-top:2px;"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg><span>XIT via WI-FI (PAINEL VIA WI-FI)</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Rastreamento de cabeça</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>UMP AUTOMÁTICA</span></li>
+                </ul>
+                <ul class="package-features features-extra" id="extra-iphone">
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Aim Regedit</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>2x Aim bot</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>HeadShot</span></li>
@@ -1134,6 +1211,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Nosso ZAP como seu Suporte pessoal</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>7 Dias de garantia total</span></li>
                 </ul>
+                <button class="ver-mais-btn" onclick="toggleExtra('iphone', this)">Ver mais recursos &#9662;</button>
                 <div class="oferta-wrapper">
                     <p class="texto-oferta-principal">
                         Você vai investir um valor menor que uma pizza! <br>
@@ -1142,6 +1220,11 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
                     <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
                     <a href="https://ggcheckout.app/checkout/v5/2IvPVxU1JbX5naLV8mZb" target="_blank" class="btn-comprar-verde">🛒 COMPRAR AGORA!</a>
+                    <div class="trust-badges">
+                        <span>🔒 Compra 100% segura</span>
+                        <span>⚡ Entrega imediata</span>
+                        <span>💳 Pix / Cartão</span>
+                    </div>
                 </div>
             </div>
 
@@ -1160,6 +1243,8 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Rastreamento de cabeça avançado</span></li>
                     <li><svg width="16" height="16" viewBox="0 0 24 24" fill="#eab308" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>UMP Automática v2 Premium</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Função HS pescoço + Bypass</span></li>
+                </ul>
+                <ul class="package-features features-extra" id="extra-vip">
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>XIT via WI-FI (PAINEL VIA WI-FI)</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mira automática Full capa</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Disfarce 100% indetectável</span></li>
@@ -1177,6 +1262,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Acesso antecipado de Atualizações</span></li>
                     <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="stroke:#8b5cf6;flex-shrink:0;margin-top:2px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Garantia total de 30 Dias!</span></li>
                 </ul>
+                <button class="ver-mais-btn" onclick="toggleExtra('vip', this)">Ver mais recursos &#9662;</button>
                 <div class="oferta-wrapper">
                     <p class="texto-oferta-principal">
                         Você vai investir um valor menor que uma pizza! <br>
@@ -1184,7 +1270,12 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     </p>
                     <div class="preco-revelado"><span>Apenas</span> R$ 47,99!</div>
                     <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
-                    <a href="https://ggcheckout.app/checkout/v5/26wfLRhM3taBgtBvEJVe" target="_blank" class="package-button animate-neon-yellow" style="display:block;text-align:center;text-decoration:none;">👑 QUERO SER VIP!</a>
+                    <a href="https://ggcheckout.app/checkout/v5/26wfLRhM3taBgtBvEJVe" target="_blank" class="btn-comprar-verde btn-comprar-dourado">👑 QUERO SER VIP!</a>
+                    <div class="trust-badges">
+                        <span>🔒 Compra 100% segura</span>
+                        <span>⚡ Entrega imediata</span>
+                        <span>🛡️ Garantia de 30 dias</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1260,6 +1351,12 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         </div>
     </section>
 
+    <!-- WhatsApp Flutuante -->
+    <!-- ATENÇÃO: troque o número abaixo (formato: 55DDDNÚMERO, só dígitos) pelo seu WhatsApp real -->
+    <a href="https://wa.me/5500000000000?text=Oi!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Painel%20Toji%20XIT" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.15-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
+    </a>
+
     <!-- Sticky CTA -->
     <div class="sticky-cta" id="sticky-cta">
         <a href="#pacotes">⚔️ GARANTIR MINHA VAGA</a>
@@ -1300,7 +1397,20 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
     <!-- ====== SCRIPTS ====== -->
     <script>
         // Date
-        document.getElementById('data-display').textContent = new Date().toLocaleDateString('pt-BR');
+        // Contador regressivo até a meia-noite (reinicia todo dia, gera urgência real)
+        function updateCountdown() {
+            const now = new Date();
+            const meiaNoite = new Date(now);
+            meiaNoite.setHours(24, 0, 0, 0);
+            let diff = Math.max(0, meiaNoite - now);
+            const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+            const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+            const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+            const el = document.getElementById('countdown-timer');
+            if (el) el.textContent = `${h}:${m}:${s}`;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
 
         // Sales counter
         let salesCount = 252;
@@ -1382,7 +1492,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         scheduleNext();
 
         // ====== CAROUSEL ======
-        const TOTAL_SLIDES = 11;
+        const TOTAL_SLIDES = 5;
         let currentSlide = 0, autoplayTimer = null;
         const track = document.getElementById('carouselTrack');
         const dotsContainer = document.getElementById('carouselDots');
@@ -1426,6 +1536,14 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         function resetAutoplay() { clearInterval(autoplayTimer); startAutoplay(); }
         startAutoplay();
 
+        // Pausa o autoplay enquanto o vídeo de depoimento estiver tocando
+        const depoimentoVideo = trackContainer.querySelector('video');
+        if (depoimentoVideo) {
+            depoimentoVideo.addEventListener('play', () => clearInterval(autoplayTimer));
+            depoimentoVideo.addEventListener('pause', () => startAutoplay());
+            depoimentoVideo.addEventListener('ended', () => startAutoplay());
+        }
+
         // Touch swipe
         let touchStartX = 0, touchStartY = 0, isSwiping = false;
         trackContainer.addEventListener('touchstart', (e) => {
@@ -1450,6 +1568,13 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
             const btn = document.getElementById('saibaMaisBtn');
             const isOpen = about.classList.toggle('open');
             btn.textContent = isOpen ? 'FECHAR ▲' : 'SAIBA MAIS SOBRE NÓS';
+        }
+
+        // Ver mais recursos
+        function toggleExtra(id, btn) {
+            const el = document.getElementById('extra-' + id);
+            const aberto = el.classList.toggle('aberto');
+            btn.textContent = aberto ? 'Ver menos recursos ▴' : 'Ver mais recursos ▾';
         }
 
         // FAQ
