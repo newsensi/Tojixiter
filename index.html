@@ -1031,14 +1031,9 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                         Você vai investir um valor menor que uma pizza! <br>
                         De <span class="preco-antigo">R$ 147,90</span> por...
                     </p>
-                    <button id="btn-revelar-android" class="btn-revelar" onclick="revelarOferta('android')">
-                        REVELAR OFERTA
-                    </button>
-                    <div id="secao-oculta-android" class="oculto">
-                        <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
-                        <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
-                        <a href="https://ggcheckout.app/checkout/v5/6h2AaJ1Pm256ijSFQay8" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
-                    </div>
+                    <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
+                    <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
+                    <a href="https://ggcheckout.app/checkout/v5/6h2AaJ1Pm256ijSFQay8" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
                 </div>
             </div>
 
@@ -1077,14 +1072,9 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                         Você vai investir um valor menor que uma pizza! <br>
                         De <span class="preco-antigo">R$ 197,90</span> por...
                     </p>
-                    <button id="btn-revelar-iphone" class="btn-revelar" onclick="revelarOferta('iphone')">
-                        REVELAR OFERTA
-                    </button>
-                    <div id="secao-oculta-iphone" class="oculto">
-                        <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
-                        <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
-                        <a href="https://ggcheckout.app/checkout/v5/2IvPVxU1JbX5naLV8mZb" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
-                    </div>
+                    <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
+                    <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
+                    <a href="https://ggcheckout.app/checkout/v5/2IvPVxU1JbX5naLV8mZb" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
                 </div>
             </div>
 
@@ -1125,14 +1115,9 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                         Você vai investir um valor menor que uma pizza! <br>
                         De <span class="preco-antigo">R$ 297,90</span> por...
                     </p>
-                    <button id="btn-revelar-vip" class="btn-revelar vip" onclick="revelarOferta('vip')">
-                        REVELAR OFERTA
-                    </button>
-                    <div id="secao-oculta-vip" class="oculto">
-                        <div class="preco-revelado"><span>Apenas</span> R$ 47,99!</div>
-                        <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
-                        <a href="https://ggcheckout.app/checkout/v5/26wfLRhM3taBgtBvEJVe" target="_blank" class="package-button animate-neon-yellow" style="display:block;text-align:center;text-decoration:none;">👑 QUERO SER VIP!</a>
-                    </div>
+                    <div class="preco-revelado"><span>Apenas</span> R$ 47,99!</div>
+                    <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
+                    <a href="https://ggcheckout.app/checkout/v5/26wfLRhM3taBgtBvEJVe" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">👑 QUERO SER VIP!</a>
                 </div>
             </div>
         </div>
@@ -1400,17 +1385,6 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
             btn.textContent = isOpen ? 'FECHAR ▲' : 'SAIBA MAIS SOBRE NÓS';
         }
 
-        // ====== SISTEMA REVELAR OFERTA ======
-        function revelarOferta(id) {
-            var btn = document.getElementById('btn-revelar-' + id);
-            var secao = document.getElementById('secao-oculta-' + id);
-            if (btn) btn.style.display = 'none';
-            if (secao) {
-                secao.classList.remove('oculto');
-                secao.classList.add('visivel');
-            }
-        }
-
         // FAQ
         function toggleFaq(index) {
             document.getElementById(`faq-answer-${index}`).classList.toggle('open');
@@ -1429,7 +1403,83 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         }
     </script>
 
-    <!-- ====== CURSED ENERGY CANVAS ====== -->
+    <!-- ====== FUNDO ANIMADO ======
+         Fundo novo (mais leve/elegante, "aurora" roxa suave), pensado pra não distrair
+         o cliente na hora da compra. O fundo ANTIGO (rede de nós + kanjis + grid 3D)
+         está comentado logo abaixo, caso você queira voltar pra ele — é só:
+         1) apagar/comentar o bloco "FUNDO NOVO"
+         2) descomentar o bloco "FUNDO ANTIGO (ORIGINAL)"
+    -->
+    <script>
+    (function() {
+        // ====== FUNDO NOVO: Aurora roxa suave ======
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let W, H, t = 0;
+
+        function resize() {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+
+        // Blobs de "aurora" que se movem lentamente
+        const blobs = [
+            { xr: 0.22, yr: 0.15, r: 0.55, color: '139,92,246', speed: 0.00018, phase: 0 },
+            { xr: 0.78, yr: 0.30, r: 0.45, color: '124,58,237', speed: 0.00013, phase: 2 },
+            { xr: 0.35, yr: 0.80, r: 0.50, color: '109,40,217', speed: 0.00021, phase: 4 },
+            { xr: 0.85, yr: 0.85, r: 0.40, color: '139,92,246', speed: 0.00016, phase: 1 }
+        ];
+
+        function draw() {
+            t++;
+            ctx.clearRect(0, 0, W, H);
+
+            // fundo base bem escuro
+            ctx.fillStyle = '#06060e';
+            ctx.fillRect(0, 0, W, H);
+
+            // blobs suaves, sem excesso de brilho perto do centro (onde ficam os textos/botões)
+            blobs.forEach(b => {
+                const x = (b.xr + Math.sin(t * b.speed + b.phase) * 0.04) * W;
+                const y = (b.yr + Math.cos(t * b.speed * 0.8 + b.phase) * 0.04) * H;
+                const r = b.r * Math.max(W, H) * 0.5;
+                const grd = ctx.createRadialGradient(x, y, 0, x, y, r);
+                grd.addColorStop(0, `rgba(${b.color},0.16)`);
+                grd.addColorStop(0.5, `rgba(${b.color},0.06)`);
+                grd.addColorStop(1, 'rgba(0,0,0,0)');
+                ctx.fillStyle = grd;
+                ctx.beginPath();
+                ctx.arc(x, y, r, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
+            // leve textura de "grão" pra dar profundidade sem poluir
+            ctx.fillStyle = 'rgba(255,255,255,0.008)';
+            for (let i = 0; i < 40; i++) {
+                const gx = (i * 137.5 + t * 0.05) % W;
+                const gy = (i * 219.3) % H;
+                ctx.fillRect(gx, gy, 1, 1);
+            }
+
+            // vinheta discreta, mais forte nas bordas, quase nula no centro
+            // (garante que o conteúdo central — textos e botões de compra — fique sempre limpo)
+            const vgrd = ctx.createRadialGradient(W/2, H/2, H*0.35, W/2, H/2, H*0.95);
+            vgrd.addColorStop(0, 'rgba(0,0,0,0)');
+            vgrd.addColorStop(1, 'rgba(2,0,10,0.55)');
+            ctx.fillStyle = vgrd;
+            ctx.fillRect(0, 0, W, H);
+
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        draw();
+    })();
+    </script>
+
+    <!--
+    ====== FUNDO ANTIGO (ORIGINAL) — descomente este bloco e comente o "FUNDO NOVO" acima pra voltar ======
     <script>
     (function() {
         const canvas = document.getElementById('bg-canvas');
@@ -1439,7 +1489,6 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         const NODE_COUNT = 65;
         let nodes = [];
 
-        // Japanese kanji for Toji theme
         const KANJI = ['殺','呪','術','最','強','気','無','影','刃','霊','式','神'];
         let kanji = [];
 
@@ -1516,7 +1565,6 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
             });
         }
 
-        // Ink slash decorations
         const slashes = Array.from({ length: 6 }, () => ({
             x: randRange(0.1, 0.9), y: randRange(0.1, 0.9),
             angle: randRange(-0.6, 0.6),
@@ -1531,7 +1579,6 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                 ctx.save();
                 ctx.translate(s.x * W, s.y * H);
                 ctx.rotate(s.angle);
-                // Sword slash line
                 ctx.beginPath();
                 ctx.moveTo(-s.len / 2, 0);
                 ctx.lineTo(s.len / 2, 0);
@@ -1604,7 +1651,6 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         }
 
         function drawVignette() {
-            // Dark vignette with slight purple tint
             const vgrd = ctx.createRadialGradient(W/2, H/2, H*0.25, W/2, H/2, H*0.9);
             vgrd.addColorStop(0, 'rgba(0,0,0,0)');
             vgrd.addColorStop(1, 'rgba(2,0,10,0.65)');
@@ -1632,5 +1678,6 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         draw();
     })();
     </script>
+    -->
 </body>
 </html>
