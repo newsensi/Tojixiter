@@ -1469,8 +1469,12 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         function getRand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
         function getInitials(f, l) { return (f[0] + l[0]).toUpperCase(); }
         function maskName(f, l) { return f + ' ' + l[0] + l.slice(1).replace(/[a-zA-ZÀ-ú]/g, '*'); }
+        let ultimoNomeNotif = '';
         function showNotification() {
-            const fn = getRand(notifData.firstNames), ln = getRand(notifData.lastNames);
+            let fn, ln;
+            do { fn = getRand(notifData.firstNames); ln = getRand(notifData.lastNames); }
+            while (fn + ln === ultimoNomeNotif); // evita repetir a mesma pessoa duas vezes seguidas
+            ultimoNomeNotif = fn + ln;
             const product = getRand(notifData.products), city = getRand(notifData.cities);
             const timeAgo = getRand(notifData.timeAgo), ap = getRand(notifData.avatarColors);
             const n = document.createElement('div');
@@ -1485,11 +1489,26 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
             document.getElementById('notifications').appendChild(n);
             setTimeout(() => { n.classList.add('removing'); setTimeout(() => n.remove(), 400); }, 5500);
         }
-        setTimeout(() => showNotification(), 2000);
-        function scheduleNext() {
-            setTimeout(() => { showNotification(); scheduleNext(); }, Math.floor(Math.random() * 6000) + 5000);
+
+        // Não mostra notificação enquanto a seção de pacotes (onde ficam os botões de compra)
+        // estiver visível na tela, pra não atrapalhar a decisão de compra do cliente.
+        let pacotesVisiveis = false;
+        const pacotesEl = document.getElementById('pacotes');
+        if (pacotesEl && 'IntersectionObserver' in window) {
+            new IntersectionObserver(entries => { pacotesVisiveis = entries[0].isIntersecting; }, { threshold: 0.2 }).observe(pacotesEl);
         }
-        scheduleNext();
+
+        // Intervalo bem mais espaçado e aleatório (entre 20s e 55s) pra parecer orgânico, não robótico
+        function proximoIntervalo() { return Math.floor(Math.random() * 35000) + 20000; }
+
+        function scheduleNext() {
+            setTimeout(() => {
+                if (!pacotesVisiveis) showNotification();
+                scheduleNext();
+            }, proximoIntervalo());
+        }
+        // Primeira notificação só aparece depois de um tempo (10 a 18s), pra não "atirar" assim que a página carrega
+        setTimeout(() => { if (!pacotesVisiveis) showNotification(); scheduleNext(); }, Math.floor(Math.random() * 8000) + 10000);
 
         // ====== CAROUSEL ======
         const TOTAL_SLIDES = 5;
