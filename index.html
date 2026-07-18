@@ -628,6 +628,49 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
         .package-button:hover { transform: scale(1.03); box-shadow: 0 10px 30px rgba(139,92,246,0.4); }
         .package-card.vip .package-button { background: linear-gradient(135deg, #ca8a04, var(--gold)); color: black; }
 
+        /* ====== BOTÃO DE COMPRA ESTILO VÍDEO (verde, pílula, com brilho) ====== */
+        @keyframes glow-green-pulse {
+            0%, 100% { box-shadow: 0 8px 24px rgba(22,163,74,0.45), 0 0 24px rgba(74,222,128,0.35); }
+            50% { box-shadow: 0 10px 32px rgba(22,163,74,0.6), 0 0 42px rgba(74,222,128,0.55); }
+        }
+        @keyframes shine-sweep {
+            0% { left: -60%; }
+            55% { left: 130%; }
+            100% { left: 130%; }
+        }
+        .btn-comprar-verde {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #4ade80, #16a34a);
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            font-size: 19px;
+            letter-spacing: 0.08em;
+            padding: 18px;
+            border: none;
+            border-radius: 9999px;
+            cursor: pointer;
+            text-decoration: none;
+            animation: glow-green-pulse 2.2s ease-in-out infinite;
+            transition: transform 0.25s;
+        }
+        .btn-comprar-verde:hover { transform: scale(1.03); }
+        .btn-comprar-verde::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -60%;
+            width: 45%; height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.65), transparent);
+            transform: skewX(-20deg);
+            animation: shine-sweep 2.6s ease-in-out infinite;
+        }
+
         /* ====== SISTEMA REVELAR OFERTA ====== */
         .oferta-wrapper { margin-bottom: 24px; text-align: center; }
         .texto-oferta-principal {
@@ -1033,7 +1076,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     </p>
                     <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
                     <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
-                    <a href="https://ggcheckout.app/checkout/v5/6h2AaJ1Pm256ijSFQay8" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
+                    <a href="https://ggcheckout.app/checkout/v5/6h2AaJ1Pm256ijSFQay8" target="_blank" class="btn-comprar-verde">🛒 COMPRAR AGORA!</a>
                 </div>
             </div>
 
@@ -1074,7 +1117,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     </p>
                     <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
                     <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
-                    <a href="https://ggcheckout.app/checkout/v5/2IvPVxU1JbX5naLV8mZb" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">🛒 COMPRAR AGORA!</a>
+                    <a href="https://ggcheckout.app/checkout/v5/2IvPVxU1JbX5naLV8mZb" target="_blank" class="btn-comprar-verde">🛒 COMPRAR AGORA!</a>
                 </div>
             </div>
 
@@ -1117,7 +1160,7 @@ src="https://www.facebook.com/tr?id=1085327547302181&ev=PageView&noscript=1"
                     </p>
                     <div class="preco-revelado"><span>Apenas</span> R$ 47,99!</div>
                     <p class="texto-escassez">⚡ Atenção: Esse valor pode subir a qualquer momento.</p>
-                    <a href="https://ggcheckout.app/checkout/v5/26wfLRhM3taBgtBvEJVe" target="_blank" class="package-button animate-neon-purple" style="display:block;text-align:center;text-decoration:none;">👑 QUERO SER VIP!</a>
+                    <a href="https://ggcheckout.app/checkout/v5/26wfLRhM3taBgtBvEJVe" target="_blank" class="btn-comprar-verde">👑 QUERO SER VIP!</a>
                 </div>
             </div>
         </div>
