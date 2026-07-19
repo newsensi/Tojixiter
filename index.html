@@ -378,7 +378,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
 
         /* ====== FEATURES ====== */
         .features {
-            padding: 80px 16px;
+            padding: 60px 16px 40px;
             background: linear-gradient(to bottom, transparent, var(--bg2));
         }
         .features-title {
@@ -447,7 +447,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         .feature-card p { color: var(--text-muted); text-align: center; line-height: 1.7; font-size: 0.95rem; }
 
         /* ====== TESTIMONIALS ====== */
-        .testimonials { padding: 64px 16px; }
+        .testimonials { padding: 36px 16px 64px; }
         .testimonials h2 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 2.8rem;
@@ -703,6 +703,18 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
             background: linear-gradient(135deg, #facc15, #ca8a04);
             color: #1a1204;
             animation: glow-gold-pulse 2.2s ease-in-out infinite;
+        }
+        /* Variante pra uso solo (fora dos cards de pacote), como o CTA do topo */
+        .btn-comprar-verde--solo {
+            display: inline-flex;
+            width: auto;
+            padding: 20px 48px;
+            font-size: 1.5rem;
+            animation: glow-green-pulse 2.2s ease-in-out infinite, cta-bounce-subtle 2.6s ease-in-out infinite;
+        }
+        @keyframes cta-bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
         }
 
         /* ====== SELOS DE SEGURANÇA / MICROCOPY ====== */
@@ -975,12 +987,12 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         }
 
         /* ====== BENEFÍCIOS / ANTES E DEPOIS / CONFIANÇA ====== */
-        .benefits-section { padding: 70px 16px; background: linear-gradient(to bottom, var(--bg2), transparent); }
+        .benefits-section { padding: 36px 16px 40px; background: linear-gradient(to bottom, var(--bg2), transparent); }
         .benefits-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 7vw, 2.4rem); font-weight: 400; letter-spacing: 0.05em; text-align: center; margin-bottom: 8px; padding: 0 8px; }
         .benefits-tagline { text-align: center; color: var(--text-muted); font-size: 1.05rem; font-weight: 600; margin-bottom: 48px; max-width: 640px; margin-left: auto; margin-right: auto; }
 
         /* Antes e Depois */
-        .antes-depois { max-width: 900px; margin: 0 auto 56px; display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .antes-depois { max-width: 900px; margin: 0 auto 32px; display: grid; grid-template-columns: 1fr; gap: 20px; }
         .ad-card {
             background: var(--surface);
             border-radius: 4px;
@@ -1008,7 +1020,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         .aspiracional span { display: inline-block; color: var(--primary); filter: drop-shadow(0 0 10px var(--primary)); }
 
         /* Faixa de confiança */
-        .trust-strip { max-width: 1100px; margin: 40px auto 0; display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+        .trust-strip { max-width: 1100px; margin: 8px auto 0; display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
         .trust-item {
             display: flex; align-items: center; gap: 12px;
             background: var(--surface);
@@ -1029,7 +1041,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
 
         /* Entrega/processo */
         .entrega-strip {
-            max-width: 720px; margin: 40px auto 0;
+            max-width: 720px; margin: 24px auto 0;
             display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px;
             font-size: 13.5px; color: var(--text-muted); font-weight: 600; text-align: center;
         }
@@ -1110,7 +1122,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                 <wistia-player media-id="ogux2f6klj" aspect="1.7777777777777777"></wistia-player>
             </div>
 
-            <a href="#pacotes" class="cta-button animate-glow">
+            <a href="#pacotes" class="btn-comprar-verde btn-comprar-verde--solo">
                 ⚔️ QUERO MEU PAINEL AGORA!
             </a>
 
