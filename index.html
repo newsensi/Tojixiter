@@ -456,7 +456,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
             text-align: center;
             margin-bottom: 16px;
         }
-        .testimonials-subtitle { color: var(--text-muted); text-align: center; margin-bottom: 48px; font-size: 1.125rem; }
+        .testimonials-subtitle { color: var(--text-muted); text-align: center; margin-bottom: 28px; font-size: 1.125rem; }
 
         .carousel-wrapper { max-width: 480px; margin: 0 auto; position: relative; }
         .carousel-track-container {
@@ -989,7 +989,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         /* ====== BENEFÍCIOS / ANTES E DEPOIS / CONFIANÇA ====== */
         .benefits-section { padding: 36px 16px 40px; background: linear-gradient(to bottom, var(--bg2), transparent); }
         .benefits-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 7vw, 2.4rem); font-weight: 400; letter-spacing: 0.05em; text-align: center; margin-bottom: 8px; padding: 0 8px; }
-        .benefits-tagline { text-align: center; color: var(--text-muted); font-size: 1.05rem; font-weight: 600; margin-bottom: 48px; max-width: 640px; margin-left: auto; margin-right: auto; }
+        .benefits-tagline { text-align: center; color: var(--text-muted); font-size: 1.05rem; font-weight: 600; margin-bottom: 20px; max-width: 640px; margin-left: auto; margin-right: auto; }
 
         /* Antes e Depois */
         .antes-depois { max-width: 900px; margin: 0 auto 32px; display: grid; grid-template-columns: 1fr; gap: 20px; }
@@ -1053,6 +1053,21 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
             height: 1px;
             background: linear-gradient(to right, transparent, rgba(139,92,246,0.3), rgba(239,68,68,0.2), rgba(139,92,246,0.3), transparent);
             margin: 0;
+        }
+
+        /* Espaçamento mais compacto no mobile (que é o mais usado) — fica por último de propósito
+           pra garantir prioridade sobre as regras acima com a mesma especificidade */
+        @media (max-width: 600px) {
+            .features { padding: 40px 16px 24px; }
+            .benefits-section { padding: 20px 16px 24px; }
+            .benefits-tagline { margin-bottom: 14px; }
+            .antes-depois { margin-bottom: 20px; gap: 14px; }
+            .ad-card { padding: 20px 18px; }
+            .trust-strip { margin-top: 4px; gap: 10px; }
+            .entrega-strip { margin-top: 16px; }
+            .testimonials { padding: 20px 16px 40px; }
+            .testimonials h2 { margin-bottom: 6px; }
+            .testimonials-subtitle { margin-bottom: 24px; }
         }
     </style>
 </head>
