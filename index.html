@@ -1132,7 +1132,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         <svg class="fire-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
         </svg>
-        <span><span class="count" id="sales-count">252</span> vendas hoje!</span>
+        <span><span class="count" id="sales-count">489</span> Vendas Hoje!</span>
     </div>
 
     <!-- Notifications -->
@@ -1160,7 +1160,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
 
             <div class="benefits">
                 <p>🤩 Painel com + <strong style="color: var(--primary);">10 mil Players</strong> Ativos</p>
-                <p>🎯 Sua mira vai dar só <span style="color: var(--red); font-weight: 700;">vermelho!</span> Com Painel!</p>
+                <p>🎯 Sua mira vai dar só <span style="color: var(--red); font-weight: 700;">vermelho!</span> Com Painel XIT!</p>
             </div>
 
             <div class="user-counter animate-pulse-scale">
@@ -1169,7 +1169,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                     <circle cx="9" cy="7" r="4"/>
                     <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
                 </svg>
-                <span><strong style="color: var(--primary); font-size: 1.25rem;" id="user-count">998</strong> <span style="color: #d1d5db;">Players online agora!</span></span>
+                <span><strong style="color: var(--primary); font-size: 1.25rem;" id="user-count">1.978</strong> <span style="color: #d1d5db;">Players Ativos agora!</span></span>
             </div>
 
             <!-- Video -->
@@ -1650,7 +1650,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                 -->
                 <img src="img site/logo roxa.png" alt="Toji Panel XIT" class="footer-logo" style="border:none;border-radius:0;">
             </div>
-            <p class="footer-brand">TOJI XITER - OFICIAL</p>
+            <p class="footer-brand">TOJI XITER</p>
 
             <button class="footer-saiba-btn" id="saibaMaisBtn" onclick="toggleSaibaMais()">
                 SAIBA MAIS SOBRE NÓS
@@ -1691,7 +1691,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         setInterval(updateCountdown, 1000);
 
         // Sales counter
-        let salesCount = 252;
+        let salesCount = 489;
         setInterval(() => {
             salesCount += Math.floor(Math.random() * 3) + 1;
             document.getElementById('sales-count').textContent = salesCount;
@@ -1725,7 +1725,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         document.addEventListener('touchend', () => { isDragging = false; salesCounter.classList.remove('dragging'); });
 
         // User counter
-        let userCount = 998;
+        let userCount = 1978;
         setInterval(() => {
             userCount += Math.floor(Math.random() * 8) + 3;
             document.getElementById('user-count').textContent = userCount.toLocaleString('pt-BR');
