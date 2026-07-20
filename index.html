@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOJI PANEL - XIT | Painel para Free Fire atualizado 2026</title>
     <meta name="description" content="O painel mais poderoso do Free Fire. Poder do Toji nas suas mãos. +10.000 players já dominaram o jogo!">
+
+    <!-- Open Graph / preview de link (WhatsApp, Instagram, Facebook etc.) -->
+    <!-- IMPORTANTE: troque "https://seu-dominio.com/" pela URL real do site quando publicar -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TOJI PANEL - XIT | O melhor painel para Free Fire">
+    <meta property="og:description" content="O painel mais poderoso do Free Fire. 100% Anti-Ban, 100% Anti-Blacklist. +10.000 players já dominaram o jogo!">
+    <meta property="og:image" content="https://seu-dominio.com/img%20site/logo%20roxa.png">
+    <meta property="og:url" content="https://seu-dominio.com/">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TOJI PANEL - XIT | O melhor painel para Free Fire">
+    <meta name="twitter:description" content="O painel mais poderoso do Free Fire. 100% Anti-Ban, 100% Anti-Blacklist. +10.000 players já dominaram o jogo!">
+    <meta name="twitter:image" content="https://seu-dominio.com/img%20site/logo%20roxa.png">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
@@ -556,6 +569,20 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
             margin-bottom: 16px;
         }
         .packages-subtitle { color: var(--text-muted); text-align: center; margin-bottom: 48px; font-size: 1.125rem; }
+
+        /* ====== TABELA COMPARATIVA ====== */
+        .compare-table-wrap { max-width: 900px; margin: 0 auto 48px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .compare-table { width: 100%; min-width: 560px; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+        .compare-table th, .compare-table td { padding: 12px 10px; text-align: center; font-size: 13px; border-bottom: 1px solid var(--border); }
+        .compare-table th { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 15px; letter-spacing: 0.05em; background: var(--surface2); }
+        .compare-table td:first-child, .compare-table th:first-child { text-align: left; font-weight: 700; color: #d1d5db; padding-left: 16px; }
+        .compare-table th:nth-child(2) { color: var(--primary); }
+        .compare-table th:nth-child(3) { color: var(--primary); }
+        .compare-table th:nth-child(4) { color: var(--gold); }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table .yes { color: #4ade80; font-size: 15px; }
+        .compare-table .no { color: var(--text-dim); font-size: 15px; }
+        .compare-table tbody tr:hover { background: rgba(139,92,246,0.05); }
         .packages-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 32px; }
 
         .package-card {
@@ -729,6 +756,23 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
             font-weight: 600;
         }
         .trust-badges span { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+
+        /* ====== ÍCONES DE PAGAMENTO ====== */
+        .payment-icons { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 12px; }
+        .pay-icon {
+            display: inline-flex; align-items: center; justify-content: center;
+            height: 22px; padding: 0 8px;
+            border-radius: 4px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 0.02em;
+        }
+        .pay-icon.pix { background: #0d4d3c; color: #3ddc97; }
+        .pay-icon.visa { background: #1a1f6e; color: #fff; font-style: italic; }
+        .pay-icon.master { display: inline-flex; align-items: center; height: 22px; width: 32px; position: relative; background: #1c1c1c; border-radius: 4px; }
+        .pay-icon.master span:nth-child(1) { position: absolute; left: 6px; width: 14px; height: 14px; border-radius: 50%; background: #eb001b; }
+        .pay-icon.master span:nth-child(2) { position: absolute; left: 12px; width: 14px; height: 14px; border-radius: 50%; background: #f79e1b; mix-blend-mode: screen; }
 
         /* ====== WHATSAPP FLUTUANTE ====== */
         .whatsapp-float {
@@ -1076,7 +1120,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
 
     <!-- Banner -->
     <div class="banner-verde">
-        <p>🚨 Oferta acaba em <span class="destaque" id="countdown-timer">23:59:59</span> 🚨</p>
+        <p>⚔️ Oferta acaba em <span class="destaque" id="countdown-timer">23:59:59</span> ⚔️</p>
     </div>
 
     <!-- Sales Counter -->
@@ -1111,7 +1155,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
             </h1>
 
             <div class="benefits">
-                <p>🤩 Painel com + <strong style="color: var(--primary);">10 mil Players</strong> Ativos</p>
+                <p>⚔️ Painel com + <strong style="color: var(--primary);">10 mil Players</strong> Ativos</p>
                 <p>🩸 Sua mira vai dar só <span style="color: var(--red); font-weight: 700;">vermelho!</span> Com Panel XIT!</p>
             </div>
 
@@ -1121,7 +1165,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                     <circle cx="9" cy="7" r="4"/>
                     <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
                 </svg>
-                <span><strong style="color: var(--primary); font-size: 1.25rem;" id="user-count">1978</strong> <span style="color: #d1d5db;">Players online agora!</span></span>
+                <span><strong style="color: var(--primary); font-size: 1.25rem;" id="user-count">998</strong> <span style="color: #d1d5db;">Players online agora!</span></span>
             </div>
 
             <!-- Video -->
@@ -1284,6 +1328,30 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
     <section id="pacotes" class="packages">
         <h2>Escolha Seu <span class="text-neon">Plano</span> Abaixo</h2>
         <p class="packages-subtitle">Todos os planos incluem suporte e garantia</p>
+
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Recurso</th>
+                        <th>Android</th>
+                        <th>iPhone/iOS</th>
+                        <th>👑 VIP Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mira automática Full Capa</td><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+                    <tr><td>100% Anti-Ban / Anti-Blacklist</td><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+                    <tr><td>Disfarce indetectável</td><td class="yes">✅</td><td class="yes">✅</td><td class="yes">✅</td></tr>
+                    <tr><td>No Recoil (sem espalhar tiro)</td><td class="no">—</td><td class="no">—</td><td class="yes">✅</td></tr>
+                    <tr><td>UMP Automática v2 Premium</td><td class="no">—</td><td class="no">—</td><td class="yes">✅</td></tr>
+                    <tr><td>Suporte VIP exclusivo 24h</td><td class="no">—</td><td class="no">—</td><td class="yes">✅</td></tr>
+                    <tr><td>Atualizações vitalícias</td><td class="no">—</td><td class="no">—</td><td class="yes">✅</td></tr>
+                    <tr><td>Garantia</td><td>7 dias</td><td>7 dias</td><td>30 dias</td></tr>
+                </tbody>
+            </table>
+        </div>
+
         <div class="packages-grid">
 
             <!-- ANDROID -->
@@ -1331,6 +1399,11 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                         <span>🔒 Compra 100% segura</span>
                         <span>⚡ Entrega imediata</span>
                         <span>💳 Pix / Cartão</span>
+                    </div>
+                    <div class="payment-icons">
+                        <span class="pay-icon pix">Pix</span>
+                        <span class="pay-icon visa">VISA</span>
+                        <span class="pay-icon master"><span></span><span></span></span>
                     </div>
                 </div>
             </div>
@@ -1380,6 +1453,11 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                         <span>🔒 Compra 100% segura</span>
                         <span>⚡ Entrega imediata</span>
                         <span>💳 Pix / Cartão</span>
+                    </div>
+                    <div class="payment-icons">
+                        <span class="pay-icon pix">Pix</span>
+                        <span class="pay-icon visa">VISA</span>
+                        <span class="pay-icon master"><span></span><span></span></span>
                     </div>
                 </div>
             </div>
@@ -1443,6 +1521,11 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                         <span>🔒 Compra 100% segura</span>
                         <span>⚡ Entrega imediata</span>
                         <span>🛡️ Garantia de 30 dias</span>
+                    </div>
+                    <div class="payment-icons">
+                        <span class="pay-icon pix">Pix</span>
+                        <span class="pay-icon visa">VISA</span>
+                        <span class="pay-icon master"><span></span><span></span></span>
                     </div>
                 </div>
             </div>
@@ -1516,6 +1599,33 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                     <p><strong>100% Anti-ban garantido!</strong> Nosso sistema é indetectável e já está sendo usado por mais de 10.000 players sem problemas. Caso aconteça algo, reembolsamos tudo!</p>
                 </div>
             </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(4)">
+                    <span>SE O FREE FIRE ATUALIZAR, O PAINEL PARA DE FUNCIONAR?</span>
+                    <svg class="icon faq-icon" id="faq-icon-4" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-4">
+                    <p>Nossa equipe atualiza o painel sempre que o Free Fire lança uma nova versão, geralmente no mesmo dia ou em poucas horas. Você recebe a atualização sem custo extra, direto pelo suporte no WhatsApp.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(5)">
+                    <span>FUNCIONA EM QUALQUER VERSÃO DE ANDROID/iOS?</span>
+                    <svg class="icon faq-icon" id="faq-icon-5" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-5">
+                    <p>Sim, o painel é compatível com a grande maioria dos aparelhos Android e iPhone atuais. Se tiver qualquer dúvida sobre o seu modelo específico, é só chamar no WhatsApp antes de comprar que a gente confirma pra você.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(6)">
+                    <span>POSSO USAR EM MAIS DE UM APARELHO?</span>
+                    <svg class="icon faq-icon" id="faq-icon-6" width="24" height="24" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer" id="faq-answer-6">
+                    <p>A licença é vinculada a 1 aparelho por padrão. Se precisar usar em mais de um dispositivo, chama no nosso suporte pelo WhatsApp que a gente te explica as opções disponíveis.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1526,7 +1636,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
 
     <!-- Sticky CTA -->
     <div class="sticky-cta" id="sticky-cta">
-        <a href="#pacotes">GARANTIR MEU XIT!</a>
+        <a href="#pacotes">⚔️ GARANTIR MINHA VAGA</a>
     </div>
 
     <!-- Footer -->
@@ -1536,9 +1646,9 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                 <!--
                     IMAGEM: coloque "toji_pfp.jfif" na mesma pasta do HTML
                 -->
-                <img src="img site/logo roxa.png" alt="Toji Panel XIT" class="footer-logo" style="border:none;border-radius:0;">
+                <img src="img site/logo toji.png" alt="Toji Panel XIT" class="footer-logo" style="border:none;border-radius:0;">
             </div>
-            <p class="footer-brand">TOJI XITER</p>
+            <p class="footer-brand">TOJI XITER - OFICIAL</p>
 
             <button class="footer-saiba-btn" id="saibaMaisBtn" onclick="toggleSaibaMais()">
                 SAIBA MAIS SOBRE NÓS
@@ -1614,7 +1724,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         document.addEventListener('touchend', () => { isDragging = false; salesCounter.classList.remove('dragging'); });
 
         // User counter
-        let userCount = 1978;
+        let userCount = 998;
         setInterval(() => {
             userCount += Math.floor(Math.random() * 8) + 3;
             document.getElementById('user-count').textContent = userCount.toLocaleString('pt-BR');
