@@ -298,7 +298,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         }
         .logo-container { margin-bottom: 32px; position: relative; }
         .logo {
-            width: 200px;
+            width: 140px;
             max-width: 90%;
             height: auto;
             margin: 0 auto;
@@ -858,11 +858,27 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         .oculto { display: none; opacity: 0; transition: opacity 0.5s ease-in-out; }
         .visivel { display: block !important; opacity: 1; animation: surgir 0.4s ease-in-out; }
 
+        /* ====== PREÇO ESTILO IMAGEM (De X riscado / Por apenas / Valor grande, em roxo) ====== */
+        .preco-de {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.03em;
+            color: var(--red);
+            text-decoration: line-through;
+            margin-bottom: 4px;
+        }
+        .preco-por-apenas {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
         .preco-revelado {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 2.6rem;
             font-weight: 400;
-            margin: 18px 0 6px 0;
+            margin: 6px 0 6px 0;
             letter-spacing: 0.03em;
             background: linear-gradient(90deg, #c4b5fd, #8b5cf6);
             -webkit-background-clip: text;
@@ -1029,7 +1045,7 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         /* ====== RESPONSIVE ====== */
         @media (max-width: 480px) { h1 { font-size: clamp(2.2rem, 12vw, 3rem); } }
         @media (min-width: 768px) {
-            .logo { width: 220px; }
+            .logo { width: 160px; }
             .features-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
             .packages-grid { grid-template-columns: repeat(3, 1fr); }
         }
@@ -1264,12 +1280,8 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
-                        <line x1="8" y1="7" x2="6" y2="5"/><line x1="16" y1="7" x2="18" y2="5"/>
-                        <rect x="5" y="3.5" width="4" height="2.5" rx="1" fill="white" stroke="none"/>
-                        <rect x="15" y="3.5" width="4" height="2.5" rx="1" fill="white" stroke="none"/>
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="white" stroke="none">
+                        <path d="M12 2c-1.1 0-2 .9-2 2v.28A5.98 5.98 0 007.5 6.5L6 5l-1 1 1.5 1.5A5.98 5.98 0 006 10H4v2h2c0 .68.1 1.34.28 1.95L5 15.28l1.28 1.28 1.28-1.28c.4.24.83.44 1.28.6L9 18v2h2v-2h2v2h2v-2l.16-1.12c.45-.16.88-.36 1.28-.6l1.28 1.28L19 15.28l-1.28-1.33c.18-.61.28-1.27.28-1.95h2v-2h-2c0-1.28-.44-2.46-1.18-3.4L18.5 5l-1-1-1.5 1.78A5.98 5.98 0 0014 4.28V4c0-1.1-.9-2-2-2zm0 6a3 3 0 110 6 3 3 0 010-6z"/>
                     </svg>
                 </div>
                 <h3>SISTEMA STEALTH</h3>
@@ -1403,11 +1415,9 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                 </ul>
                 <button class="ver-mais-btn" onclick="toggleExtra('android', this)">Ver mais recursos &#9662;</button>
                 <div class="oferta-wrapper">
-                    <p class="texto-oferta-principal">
-                       Só hoje Você vai investir um valor menor! <br>
-                        De <span class="preco-antigo">R$ 147,90</span> por...
-                    </p>
-                    <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
+                    <p class="preco-de">De R$ 147,90</p>
+                    <p class="preco-por-apenas">Por apenas</p>
+                    <div class="preco-revelado">R$ 29,90</div>
                     <p class="texto-escassez">🚨 Atenção: Esse valor pode subir a qualquer momento.</p>
                     <a href="https://ggcheckout.app/checkout/v5/6h2AaJ1Pm256ijSFQay8" target="_blank" class="btn-comprar-verde">🛒 COMPRAR AGORA!</a>
                     <div class="trust-badges">
@@ -1456,11 +1466,9 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                 </ul>
                 <button class="ver-mais-btn" onclick="toggleExtra('iphone', this)">Ver mais recursos &#9662;</button>
                 <div class="oferta-wrapper">
-                    <p class="texto-oferta-principal">
-                        Só hoje Você vai investir um valor menor! <br>
-                        De <span class="preco-antigo">R$ 197,90</span> por...
-                    </p>
-                    <div class="preco-revelado"><span>Apenas</span> R$ 29,90!</div>
+                    <p class="preco-de">De R$ 197,90</p>
+                    <p class="preco-por-apenas">Por apenas</p>
+                    <div class="preco-revelado">R$ 29,90</div>
                     <p class="texto-escassez">🚨 Atenção: Esse valor pode subir a qualquer momento.</p>
                     <a href="https://ggcheckout.app/checkout/v5/2IvPVxU1JbX5naLV8mZb" target="_blank" class="btn-comprar-verde">🛒 COMPRAR AGORA!</a>
                     <div class="trust-badges">
@@ -1523,11 +1531,9 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
                 </ul>
                 <button class="ver-mais-btn" onclick="toggleExtra('vip', this)">Ver mais recursos &#9662;</button>
                 <div class="oferta-wrapper">
-                    <p class="texto-oferta-principal">
-                        Só hoje Você vai investir um valor menor! <br>
-                        De <span class="preco-antigo">R$ 297,90</span> por...
-                    </p>
-                    <div class="preco-revelado"><span>Apenas</span> R$ 47,99!</div>
+                    <p class="preco-de">De R$ 297,90</p>
+                    <p class="preco-por-apenas">Por apenas</p>
+                    <div class="preco-revelado">R$ 47,99</div>
                     <p class="texto-escassez">🚨 Atenção: Esse valor pode subir a qualquer momento.</p>
                     <a href="https://ggcheckout.app/checkout/v5/26wfLRhM3taBgtBvEJVe" target="_blank" class="btn-comprar-verde btn-comprar-dourado">👑 QUERO SER PREMIUM!</a>
                     <div class="trust-badges">
@@ -1977,207 +1983,5 @@ src="https://www.facebook.com/tr?id=4101840533281960&ev=PageView&noscript=1"
         draw();
     })();
     </script>
-
-    <!--
-    ====== FUNDO ANTIGO (ORIGINAL) — descomente este bloco e comente o "FUNDO NOVO" acima pra voltar ======
-    <script>
-    (function() {
-        const canvas = document.getElementById('bg-canvas');
-        const ctx = canvas.getContext('2d');
-        let W, H, t = 0;
-        let mouse = { x: -9999, y: -9999 };
-        const NODE_COUNT = 65;
-        let nodes = [];
-
-        const KANJI = ['殺','呪','術','最','強','気','無','影','刃','霊','式','神'];
-        let kanji = [];
-
-        function randRange(a, b) { return a + Math.random() * (b - a); }
-
-        function resize() {
-            W = canvas.width = window.innerWidth;
-            H = canvas.height = window.innerHeight;
-        }
-
-        function createNodes() {
-            nodes = Array.from({ length: NODE_COUNT }, () => ({
-                x: randRange(0, W), y: randRange(0, H), z: randRange(60, 500),
-                vx: randRange(-0.18, 0.18), vy: randRange(-0.1, 0.1), vz: randRange(-0.35, 0.35),
-                r: randRange(1, 2.2)
-            }));
-            kanji = Array.from({ length: 18 }, () => ({
-                x: randRange(0, 1), y: randRange(0, 1.2),
-                char: KANJI[Math.floor(Math.random() * KANJI.length)],
-                size: randRange(16, 52),
-                speed: randRange(0.00006, 0.0002),
-                alpha: randRange(0.04, 0.14),
-                phase: randRange(0, Math.PI * 2)
-            }));
-        }
-
-        function project(n) {
-            const fov = 320, scale = fov / (fov + n.z);
-            return { sx: n.x * scale + W * (1 - scale) / 2, sy: n.y * scale + H * (1 - scale) / 2, scale };
-        }
-
-        function drawGrid() {
-            const horizon = H * 0.42, vp = { x: W / 2, y: horizon };
-            const COLS = 18, ROWS = 16, speed = (t * 0.35) % (H / ROWS);
-            ctx.save();
-            for (let i = 0; i <= COLS; i++) {
-                const xFrac = i / COLS;
-                ctx.beginPath();
-                ctx.moveTo(vp.x, vp.y);
-                ctx.lineTo(W * xFrac, H);
-                ctx.strokeStyle = `rgba(139,92,246,${0.025 + 0.03 * Math.sin(xFrac * Math.PI)})`;
-                ctx.lineWidth = 0.7;
-                ctx.stroke();
-            }
-            for (let j = 0; j <= ROWS; j++) {
-                const yFrac = j / ROWS;
-                const perspective = Math.pow(yFrac, 2.4);
-                const y = horizon + (H - horizon) * perspective + speed;
-                if (y > H || y < horizon) continue;
-                const alpha = 0.015 + 0.04 * perspective;
-                const xLeft = vp.x - vp.x * perspective;
-                const xRight = vp.x + (W - vp.x) * perspective;
-                ctx.beginPath();
-                ctx.moveTo(xLeft, y);
-                ctx.lineTo(xRight, y);
-                ctx.strokeStyle = `rgba(139,92,246,${alpha})`;
-                ctx.lineWidth = 0.6 + perspective;
-                ctx.stroke();
-            }
-            ctx.restore();
-        }
-
-        function drawKanji() {
-            kanji.forEach(k => {
-                k.y -= k.speed;
-                if (k.y < -0.15) { k.y = 1.15; k.x = randRange(0, 1); k.char = KANJI[Math.floor(Math.random() * KANJI.length)]; }
-                const pulse = 0.5 + 0.5 * Math.sin(t * 0.018 + k.phase);
-                const alpha = k.alpha * (0.5 + pulse * 0.5);
-                ctx.save();
-                ctx.font = `900 ${k.size}px 'Noto Sans JP', serif`;
-                ctx.fillStyle = `rgba(139,92,246,${alpha})`;
-                ctx.fillText(k.char, k.x * W, k.y * H);
-                ctx.restore();
-            });
-        }
-
-        const slashes = Array.from({ length: 6 }, () => ({
-            x: randRange(0.1, 0.9), y: randRange(0.1, 0.9),
-            angle: randRange(-0.6, 0.6),
-            len: randRange(40, 120),
-            alpha: randRange(0.03, 0.08),
-            phase: randRange(0, Math.PI * 2)
-        }));
-        function drawSlashes() {
-            slashes.forEach(s => {
-                const pulse = 0.5 + 0.5 * Math.sin(t * 0.012 + s.phase);
-                const a = s.alpha * pulse;
-                ctx.save();
-                ctx.translate(s.x * W, s.y * H);
-                ctx.rotate(s.angle);
-                ctx.beginPath();
-                ctx.moveTo(-s.len / 2, 0);
-                ctx.lineTo(s.len / 2, 0);
-                const grad = ctx.createLinearGradient(-s.len/2, 0, s.len/2, 0);
-                grad.addColorStop(0, `rgba(239,68,68,0)`);
-                grad.addColorStop(0.4, `rgba(139,92,246,${a})`);
-                grad.addColorStop(0.6, `rgba(239,68,68,${a * 0.6})`);
-                grad.addColorStop(1, `rgba(239,68,68,0)`);
-                ctx.strokeStyle = grad;
-                ctx.lineWidth = 1.5;
-                ctx.stroke();
-                ctx.restore();
-            });
-        }
-
-        const MAX_DIST = 145;
-        function drawNodes() {
-            nodes.forEach(n => {
-                n.x += n.vx; n.y += n.vy; n.z += n.vz;
-                if (n.x < 0 || n.x > W) n.vx *= -1;
-                if (n.y < 0 || n.y > H) n.vy *= -1;
-                if (n.z < 60 || n.z > 500) n.vz *= -1;
-            });
-            const projected = nodes.map(n => ({ ...project(n), node: n }));
-            const sorted = [...projected].sort((a, b) => b.node.z - a.node.z);
-            for (let i = 0; i < sorted.length; i++) {
-                for (let j = i + 1; j < sorted.length; j++) {
-                    const a = sorted[i], b = sorted[j];
-                    const dx = a.sx - b.sx, dy = a.sy - b.sy;
-                    const dist = Math.sqrt(dx*dx + dy*dy);
-                    if (dist < MAX_DIST) {
-                        const alpha = (1 - dist / MAX_DIST) * 0.1 * a.scale * b.scale * 3;
-                        ctx.beginPath();
-                        ctx.moveTo(a.sx, a.sy);
-                        ctx.lineTo(b.sx, b.sy);
-                        ctx.strokeStyle = `rgba(139,92,246,${alpha})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
-            }
-            sorted.forEach(({ sx, sy, scale, node }) => {
-                const r = node.r * scale * 2.5;
-                const alpha = 0.25 + scale * 0.6;
-                const grd = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 5);
-                grd.addColorStop(0, `rgba(139,92,246,${alpha * 0.4})`);
-                grd.addColorStop(1, 'rgba(139,92,246,0)');
-                ctx.beginPath();
-                ctx.arc(sx, sy, r * 5, 0, Math.PI * 2);
-                ctx.fillStyle = grd;
-                ctx.fill();
-                ctx.beginPath();
-                ctx.arc(sx, sy, r, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(139,92,246,${alpha})`;
-                ctx.fill();
-            });
-            nodes.forEach(n => {
-                const { sx, sy } = project(n);
-                const dx = sx - mouse.x, dy = sy - mouse.y;
-                const dist = Math.sqrt(dx*dx + dy*dy);
-                if (dist < 200) {
-                    ctx.beginPath();
-                    ctx.moveTo(mouse.x, mouse.y);
-                    ctx.lineTo(sx, sy);
-                    ctx.strokeStyle = `rgba(139,92,246,${(1 - dist/200) * 0.4})`;
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-            });
-        }
-
-        function drawVignette() {
-            const vgrd = ctx.createRadialGradient(W/2, H/2, H*0.25, W/2, H/2, H*0.9);
-            vgrd.addColorStop(0, 'rgba(0,0,0,0)');
-            vgrd.addColorStop(1, 'rgba(2,0,10,0.65)');
-            ctx.fillStyle = vgrd;
-            ctx.fillRect(0, 0, W, H);
-        }
-
-        function draw() {
-            t++;
-            ctx.fillStyle = 'rgba(6,6,14,0.5)';
-            ctx.fillRect(0, 0, W, H);
-            drawGrid();
-            drawKanji();
-            drawSlashes();
-            drawNodes();
-            drawVignette();
-            requestAnimationFrame(draw);
-        }
-
-        window.addEventListener('resize', () => { resize(); createNodes(); });
-        window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
-        window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
-        resize();
-        createNodes();
-        draw();
-    })();
-    </script>
-    -->
 </body>
 </html>
